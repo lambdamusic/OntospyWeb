@@ -1,0 +1,137 @@
+{% extends "ontoview/base.html" %}
+{% load ontotags %}
+
+
+{% block pagecontents %}
+
+{% include "ontoview/components/tabs.html" %}
+
+{# ALL INDIVIDUALS view #}
+{% if  instances %}
+
+	<div class="page-header">
+  	  <h3>Individuals</h3>
+	</div>
+
+	{% for instance in instances  %}
+		<li style="font-size: 16px;"><a title="{{instance.instance}}" class="rdfinstance" href="{% url individuals %}?model={{ontoFile}}&resource={{instance.instance|encodeuri}}">{{instance.instancename}}</a>
+		
+			{% if instance.types %}
+			is a 
+			{% for class in instance.types %}     
+			<a title="{{class.class}}" class="rdfclass"
+				{% if class.isdefined %} href="{% url classes %}?model={{ontoFile}}&resource={{class.class|encodeuri}}"{% endif %} >{{class.classname}}</a>
+				{% if not forloop.last %}, &nbsp;{% endif %}    
+			{% endfor %} 
+			{% endif %}
+		
+
+
+		
+		</li>
+	{% endfor %}
+	
+	<br /><br />
+	
+{% endif %}
+
+
+
+{# SPECIFIC INSTANCE VIEW #}
+{% if  instance %}
+
+
+	<div class="page-header">
+	  <h3>
+		  <a title="Back to all individuals" class="rdfinstance" href="{% url individuals %}?model={{ontoFile}}">All</a>&nbsp;>
+		 <a title="{{instance.instance}}" class="rdfinstance" href="{% url individuals %}?model={{ontoFile}}&resource={{instance.instance|encodeuri}}">{{instance.instance|truncchar_inverse:30}}</a>
+	  	  
+	  </h3>	  
+	</div>
+
+
+	{# show only first comment #}
+	<p class="lead">{{instance.comment.0}}</p>
+
+	<p class="lead">
+	Instance of 
+
+	{% for class in instance.types %}     
+	<a title="{{class.class}}"
+	{% if class.isdefined %} class="rdfclass" href="{% url classes %}?model={{ontoFile}}&resource={{class.class|encodeuri}}"{% endif %} >{{class.classname|truncchar_inverse:30}}</a><br />    
+	{% endfor %} 
+	</p>
+	<br />
+
+
+		{% if triples %}
+
+
+  {% for el in triples  %}
+	<br /><h4>
+		{% if el.0.isdefined %}
+		<a class="propcolor" title="{{el.0.prop}}" href="{% url properties %}?model={{ontoFile}}&resource={{el.0.prop|encodeuri}}">{{el.0.propname|truncchar_inverse:30}}</a>
+		{% else %}
+		{{el.0.propname|truncchar_inverse:30}}
+		{% endif %}
+	</h4>
+  
+  	<p class="" style="margin-left: 20px;">
+      	{{el.1}}
+ 	 </p>
+
+  {% endfor %}
+  
+  
+		{# <table border="0" cellspacing="5" cellpadding="5"> #}
+		{# 	<tr><th>Property</th><th>Value</th></tr> #}
+		{# 	{% for el in triples  %} #}
+		{# 		<tr> #}
+		{# 			<td class="firsttd"> #}
+		{# 				{% if el.0.isdefined %} #}
+		{# 				<a class="propcolor" title="{{el.0.prop}}" href="{% url properties %}?model={{ontoFile}}&resource={{el.0.prop|encodeuri}}">{{el.0.propname|truncchar_inverse:30}}</a> #}
+		{# 				{% else %} #}
+		{# 				{{el.0.propname|truncchar_inverse:30}} #}
+		{# 				{% endif %} #}
+		{# 			 #}
+		{# 				<br />					 #}
+		{# 			</td> #}
+		{# 			<td class="secondtd"> #}
+		{# 				{{el.1}} #}
+		{# 			</td> #}
+		{# 		</tr> #}
+		{#  #}
+		{# 	{% endfor %} #}
+		{#  #}
+		{# </table> #}
+
+		<br /><br />
+
+		{% endif %}
+
+
+
+	
+{% endif %}
+
+
+
+{% if  siblings %}
+
+	<div class="page-header">
+  	  <h3>Siblings</h3>
+	</div>
+
+	{% for instance in siblings  %}
+		<li><a title="{{instance}}" class="rdfinstance" href="{% url individuals %}?model={{ontoFile}}&resource={{instance|encodeuri}}">{{instance|truncchar_inverse:50}}</a></li>
+	{% endfor %}
+	
+	<br /><br />
+	
+{% endif %}
+
+
+
+
+
+{% endblock pagecontents %} 

@@ -1,0 +1,189 @@
+{% extends "ontoview/base.html" %}
+{% load ontotags %}
+
+
+{% block pagecontents %}
+
+
+{% include "ontoview/components/tabs.html" %}
+
+
+{% if resource404 %}
+
+	<div class="page-header">
+  	  <h3>Not found...</h3>
+	</div>
+
+	<p>Sorry the resource <code>{{resource}}</code> wasn't found in this ontology.
+	<br /><br />
+	
+{% endif %}
+
+
+
+{% if property %}
+
+
+	<div class="page-header">
+	  <h3>
+		  <a title="Back to property tree" class="propcolor" href="{% url properties %}?model={{ontoFile}}">All</a>&nbsp;>
+		  {% for prop in alltree  %}
+			  {% if forloop.last %}<a title="{{prop.prop}}" class="propcolor" href="{% url properties %}?model={{ontoFile}}&resource={{prop.prop|encodeuri}}">{{prop.propname|truncchar_inverse:30}}</a>
+			  {% else %}
+			  		<a title="{{prop.prop}}" class="propcolor" href="{% url properties %}?model={{ontoFile}}&resource={{prop.prop|encodeuri}}">{{prop.propname|truncchar_inverse:30}}</a>&nbsp;>
+					{% endif %}
+		  {% endfor %}
+		  
+		 	  
+	  </h3>
+      	  
+	</div>
+
+
+  {# show only first comment #}
+  {# <p class="lead">{{property.comment.0}}</p> #}
+  {# 	 #}
+  {# <br /> #}
+
+
+  {% for name, value in alltriples  %}
+	{% ifchanged name %}<br /><h4>{{name}}</h4>{% endifchanged %}
+  
+  	<p class="" style="margin-left: 20px;">
+      	{{value|linebreaksbr}}
+ 	 </p>
+
+  {% endfor %}
+
+
+  {% if property.domain %}
+	<br /><h4>rdfs:domain</h4>
+	
+    {% for class in property.domain  %}    
+	
+  	<p class="" style="margin-left: 20px;">
+    	{% if class.isdefined %}
+    	<a title="{{class.class}}" href="{% url classes %}?model={{ontoFile}}&resource={{class.class|encodeuri}}" class="rdfclass">{{class.classname|truncchar_inverse:30}}</a> 
+    	{% else %}
+    	{{class.classname|truncchar_inverse:30}}
+    	{% endif %}
+ 	 </p>
+	 
+    {% endfor %}
+  
+  {% endif %}
+
+
+
+  {% if property.range %}
+	<br /><h4>rdfs:range</h4>
+	
+    {% for class in property.range  %}    
+	
+  	<p class="" style="margin-left: 20px;">
+    	{% if class.isdefined %}
+    	<a title="{{class.class}}" href="{% url classes %}?model={{ontoFile}}&resource={{class.class|encodeuri}}" class="rdfclass">{{class.classname|truncchar_inverse:30}}</a> 
+    	{% else %}
+    	{{class.classname|truncchar_inverse:30}}
+    	{% endif %}
+ 	 </p>
+	 
+    {% endfor %}
+  
+  {% endif %}
+
+
+	
+	
+
+	<div class="row">
+		
+		<div class="span6">
+			
+			<br /><br /><br /><h3>Inheritance Diagram:</h3><hr>
+			
+			{% include "ontoview/components/tree_diagram.html" %}
+			
+		</div>
+		
+		
+		<div class="span4">
+			
+			{% if subs %}
+			
+				<br /><br /><br />
+	
+				<h3>More Specific Properties:</h3>
+				{% for prop in subs  %}
+					<li><a title="{{prop.prop}}" class="propcolor" href="{% url properties %}?model={{ontoFile}}&resource={{prop.prop|encodeuri}}">{{prop.propname|truncchar_inverse:30}}</a></li>
+				{% endfor %}	
+
+				<br />
+        
+        
+			{% endif %}
+	
+			
+		</div>
+
+	</div>
+
+
+
+{% endif %}
+
+
+
+
+
+{% if  objpropertiesTree or datapropertiesTree %}
+
+
+<div class="tabbable"> <!-- Only required for left/right tabs -->
+
+	<ul class="nav nav-pills">
+	    <li class="active">
+			<a href="#tab1" data-toggle="tab">Object</a></li>
+	    <li>
+			<a href="#tab2" data-toggle="tab">Datatype</a></li>
+	</ul>
+
+	<div class="tab-content">
+		<div class="tab-pane active" id="tab1">
+
+			<div class="page-header">
+			  <h3>Object Properties   	  
+			  </h3>	  
+			</div>
+
+			{{objpropertiesTree|safe}}
+			
+			<div class="pushup"></div>
+		  
+		  
+		</div>  {# end of tab1 #}
+			
+		<div class="tab-pane" id="tab2">
+
+			<div class="page-header">
+		  	  <h3>Datatype Properties</h3>
+			</div>
+
+
+			{{datapropertiesTree|safe}}
+			
+			<div class="pushup"></div>
+
+
+		</div>  {# end of tab2 #}
+
+	
+		
+	</div>
+</div>
+
+{% endif %}
+
+
+
+{% endblock pagecontents %} 

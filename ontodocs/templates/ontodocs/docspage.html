@@ -1,0 +1,178 @@
+{% extends "ontodocs/base.html" %}
+{% load ontotags %}
+
+
+
+{% block pagecontents %}
+
+<div class="row" style="margin-top: 50px;">
+	
+	
+	<div class="col-sm-12 col-md-12">
+		
+		
+	
+
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs nav-justified">
+		  <li class="active">
+			  <a href="#tab1" data-toggle="tab">Ontology</a></li>
+		 
+		  <li {% if not classesData %}class="disabled"{% endif %}>
+			  <a {% if classesData %}href="#tab2" data-toggle="tab"{% endif %}>Classes 
+				  {% if classesData %}
+				  <span class="badge">{{classesData|length}}</span>
+				  {% endif %}
+			  </a></li>
+		 
+		  <li {% if not objPropertiesData %}class="disabled"{% endif %}>
+			  <a {% if objPropertiesData %}href="#tab3" data-toggle="tab"{% endif %}>Object Properties
+				  {% if objPropertiesData %}
+				  <span class="badge">{{objPropertiesData|length}}</span>
+			  	  {% endif %}
+		  </a></li>
+		 
+		  <li {% if not dataPropertiesData %}class="disabled"{% endif %}>
+			  <a {% if dataPropertiesData %}href="#tab4" data-toggle="tab"{% endif %}>Datatype Properties
+			  	{% if dataPropertiesData %}
+				<span class="badge">{{dataPropertiesData|length}}</span>
+				{% endif %}
+			</a></li>
+		 
+		  <li {% if not TOTindividuals %}class="disabled"{% endif %}>
+			  <a {% if TOTindividuals %}href="#tab5" data-toggle="tab"{% endif %}>Individuals 
+				  {% if TOTindividuals %}
+				  <span class="badge">{{TOTindividuals}}</span>
+				  {% endif %}
+			  </a></li>
+		 
+		  <li>
+			  <a href="#tab6" data-toggle="tab">Metrics</a></li>
+		</ul>
+
+		
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+		  <div class="tab-pane active" id="tab1">
+			  <div class="col-sm-8 col-md-12">
+			   	{% include "ontodocs/tabs/ontology.html" %}
+			  </div>
+		  </div>
+		  <div class="tab-pane" id="tab2">
+			  <div class="col-sm-8 col-md-12">
+		  		  {% include "ontodocs/tabs/classes.html" %}
+				</div>
+		  </div>
+		  <div class="tab-pane" id="tab3">
+		  	<div class="col-sm-8 col-md-12">
+				{% include "ontodocs/tabs/objprop.html" %}
+			</div>
+		  </div>
+		  <div class="tab-pane" id="tab4">
+		  	<div class="col-sm-8 col-md-12">
+				{% include "ontodocs/tabs/dataprop.html" %}
+			</div>
+		  </div>
+		  <div class="tab-pane" id="tab5">
+		  	<div class="col-sm-8 col-md-12">
+				{% include "ontodocs/tabs/individuals.html" %}
+			</div>
+		  </div>
+		  <div class="tab-pane" id="tab6">
+		  	<div class="col-sm-8 col-md-12">
+				{% include "ontodocs/tabs/metrics.html" %}
+			</div>
+		  </div>
+		</div>
+		
+		
+		
+	</div>
+	
+	
+	
+</div>
+
+
+
+
+{% endblock pagecontents %} 
+
+
+
+
+
+
+
+{% block footer %}
+
+<div class="footer" {% if namespaces %}style="height: inherit; "{% endif %}>
+
+
+  <div class="container namespaces-container">
+
+	  <a name="jumptobottom"></a>
+
+	  {% if namespaces %}
+
+
+	  	<div class="namespaces col-sm-5 col-md-7">
+		
+	  		<h3 style="color: #777777;">Namespaces
+				<span>
+				<a href="#top" class="btn btn-default navbar-btn btn-xs">top</a>
+				</span>
+			</h3>
+			<br />
+		
+	  		<table border="0" cellspacing="5" cellpadding="10" style="margin-left: -0.5%;">
+	  	        {# <tr><th>Prefix</th><th>Full url</th></tr> #}
+			
+	  			{% for x, y in namespaces  %}
+	  			<tr>
+	  				<td style="padding: 5px;"><code>{{x}}</code></td>
+	  				<td><a href="{{y}}" target="_blank" class="text-info">{{y}}</a></td>
+	  			</tr>
+
+	  			{% endfor %}
+	
+	  		</table>
+		
+	  		<br /><br /><br /><br />
+		
+		
+		
+	  	</div>
+	
+	  {% endif %}
+
+  	</div>
+	
+	
+
+	{% include "ontodocs/components/footer-common.html" %}
+  
+
+</div>
+{% endblock footer %}
+
+
+
+
+{% block global_js  %}
+
+<script type="text/javascript">
+	
+$('#myTab a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+
+</script>
+
+{% endblock  %}
+
+
+
+

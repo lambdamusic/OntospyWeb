@@ -1,0 +1,1920 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns="http://ns.nature.com/techniques/"
+     xml:base="http://ns.nature.com/techniques/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:terms="http://ns.nature.com/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:techniques="http://ns.nature.com/techniques/"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>1.7.2</owl:versionInfo>
+        <rdfs:comment
+            >NPG Ontology: Techniques</rdfs:comment>
+        <dc:title
+            >NPG Ontology: Techniques</dc:title>
+        <dc:description
+            >This ontology models and represents Technique entities from Nature Publishing Group.</dc:description>
+        <dc:creator
+            >Nature Publishing Group</dc:creator>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#broader"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ns.nature.com/terms/code -->
+
+    <owl:DatatypeProperty rdf:about="http://ns.nature.com/terms/code"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ns.nature.com/terms/Technique -->
+
+    <owl:Class rdf:about="http://ns.nature.com/terms/Technique"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ns.nature.com/techniques/antibodies -->
+
+    <owl:Thing rdf:about="antibodies">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title>Antibodies</dc:title>
+        <skos:prefLabel>Antibodies</skos:prefLabel>
+        <terms:code>1</terms:code>
+        <skos:broader rdf:resource="cell_tissue_technologies"/>
+        <skos:broader rdf:resource="cellular_imaging"/>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="high_throughput_screening"/>
+        <skos:broader rdf:resource="molecular_biology"/>
+        <skos:broader rdf:resource="protein_techniques"/>
+        <skos:broader rdf:resource="signal_transduction_techniques"/>
+        <skos:broader rdf:resource="structural_biology"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/apoptosis -->
+
+    <skos:Concept rdf:about="apoptosis">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <skos:prefLabel>apoptosis</skos:prefLabel>
+        <dc:title>apoptosis</dc:title>
+        <terms:code>2</terms:code>
+        <skos:broader rdf:resource="cell_tissue_technologies"/>
+        <skos:broader rdf:resource="signal_transduction_techniques"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/atomic_force_microscopy -->
+
+    <terms:Technique rdf:about="atomic_force_microscopy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title
+            >Atomic Force Microscopy</dc:title>
+        <skos:prefLabel
+            >Atomic Force Microscopy</skos:prefLabel>
+        <terms:code>3</terms:code>
+        <skos:broader rdf:resource="cellular_imaging"/>
+        <skos:broader rdf:resource="spectroscopy"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/behavioral_methods -->
+
+    <owl:Thing rdf:about="behavioral_methods">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel
+            >behavioral methods</skos:prefLabel>
+        <terms:code>4</terms:code>
+        <dc:title
+            >behavioral methods</dc:title>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/bioluminescence_imaging -->
+
+    <skos:Concept rdf:about="bioluminescence_imaging">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <dc:title
+            >bioluminescence imaging</dc:title>
+        <terms:code>5</terms:code>
+        <skos:prefLabel
+            >bioluminescence imaging</skos:prefLabel>
+        <skos:broader rdf:resource="cellular_imaging"/>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="medical_and_small_animal_imaging"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/biomolecular_nuclear_magnetic_resonance -->
+
+    <owl:Thing rdf:about="biomolecular_nuclear_magnetic_resonance">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel
+            >Biomolecular Nuclear Magnetic Resonance</skos:prefLabel>
+        <dc:title
+            >Biomolecular Nuclear Magnetic Resonance</dc:title>
+        <terms:code>6</terms:code>
+        <skos:broader rdf:resource="protein_techniques"/>
+        <skos:broader rdf:resource="spectroscopy"/>
+        <skos:broader rdf:resource="structural_biology"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/biophysical_in_vitro_recordings -->
+
+    <skos:Concept rdf:about="biophysical_in_vitro_recordings">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <skos:prefLabel
+            >biophysical in vitro recordings</skos:prefLabel>
+        <terms:code>7</terms:code>
+        <dc:title
+            >biophysical in vitro recordings</dc:title>
+        <skos:broader rdf:resource="biophysical_techniques"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/biophysical_in_vivo_recordings -->
+
+    <terms:Technique rdf:about="biophysical_in_vivo_recordings">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title
+            >biophysical in vivo recordings</dc:title>
+        <terms:code>8</terms:code>
+        <skos:prefLabel
+            >biophysical in vivo recordings</skos:prefLabel>
+        <skos:broader rdf:resource="biophysical_techniques"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/biophysical_techniques -->
+
+    <terms:Technique rdf:about="biophysical_techniques">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>9</terms:code>
+        <dc:title
+            >biophysical techniques</dc:title>
+        <skos:prefLabel
+            >biophysical techniques</skos:prefLabel>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/biosensing_techniques -->
+
+    <skos:Concept rdf:about="biosensing_techniques">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <skos:prefLabel
+            >Biosensing Techniques</skos:prefLabel>
+        <terms:code>10</terms:code>
+        <dc:title
+            >Biosensing Techniques</dc:title>
+        <skos:broader rdf:resource="biophysical_techniques"/>
+        <skos:broader rdf:resource="cellular_imaging"/>
+        <skos:broader rdf:resource="molecular_detection"/>
+        <skos:broader rdf:resource="signal_transduction_techniques"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/caenorhabditis_elegans -->
+
+    <owl:Thing rdf:about="caenorhabditis_elegans">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel
+            >Caenorhabditis elegans</skos:prefLabel>
+        <terms:code>11</terms:code>
+        <dc:title
+            >Caenorhabditis elegans</dc:title>
+        <skos:broader rdf:resource="model_organism"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/cell_culture_techniques -->
+
+    <terms:Technique rdf:about="cell_culture_techniques">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel
+            >Cell Culture Techniques</skos:prefLabel>
+        <dc:title
+            >Cell Culture Techniques</dc:title>
+        <terms:code>12</terms:code>
+        <skos:broader rdf:resource="cell_tissue_technologies"/>
+        <skos:broader rdf:resource="signal_transduction_techniques"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/cell_tissue_technologies -->
+
+    <owl:Thing rdf:about="cell_tissue_technologies">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title
+            >cell/tissue technologies</dc:title>
+        <terms:code>13</terms:code>
+        <skos:prefLabel
+            >cell/tissue technologies</skos:prefLabel>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/cellular_imaging -->
+
+    <skos:Concept rdf:about="cellular_imaging">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <dc:title
+            >cellular imaging</dc:title>
+        <skos:prefLabel
+            >cellular imaging</skos:prefLabel>
+        <terms:code>14</terms:code>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/chromatin_immunoprecipitation -->
+
+    <owl:Thing rdf:about="chromatin_immunoprecipitation">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel
+            >Chromatin Immunoprecipitation</skos:prefLabel>
+        <dc:title
+            >Chromatin Immunoprecipitation</dc:title>
+        <terms:code>15</terms:code>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="genome_analysis"/>
+        <skos:broader rdf:resource="high_throughput_screening"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/chromatography -->
+
+    <skos:Concept rdf:about="chromatography">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <terms:code>16</terms:code>
+        <dc:title>chromatography</dc:title>
+        <skos:prefLabel>chromatography</skos:prefLabel>
+        <skos:broader rdf:resource="protein_techniques"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/comparative_genomic_hybridization -->
+
+    <owl:Thing rdf:about="comparative_genomic_hybridization">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>17</terms:code>
+        <skos:prefLabel
+            >Comparative Genomic Hybridization</skos:prefLabel>
+        <dc:title
+            >Comparative Genomic Hybridization</dc:title>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="genome_analysis"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/computer_assisted_image_processing -->
+
+    <owl:Thing rdf:about="computer_assisted_image_processing">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel
+            >Computer-Assisted Image Processing</skos:prefLabel>
+        <dc:title
+            >Computer-Assisted Image Processing</dc:title>
+        <terms:code>18</terms:code>
+        <skos:broader rdf:resource="cellular_imaging"/>
+        <skos:broader rdf:resource="imaging"/>
+        <skos:broader rdf:resource="medical_and_small_animal_imaging"/>
+        <skos:broader rdf:resource="molecular_detection"/>
+        <skos:broader rdf:resource="signal_transduction_techniques"/>
+        <skos:broader rdf:resource="structural_biology"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/confocal_microscopy -->
+
+    <owl:Thing rdf:about="confocal_microscopy">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>19</terms:code>
+        <dc:title
+            >confocal microscopy</dc:title>
+        <skos:prefLabel
+            >confocal microscopy</skos:prefLabel>
+        <skos:broader rdf:resource="cellular_imaging"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/cryoelectron_microscopy -->
+
+    <terms:Technique rdf:about="cryoelectron_microscopy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>20</terms:code>
+        <skos:prefLabel
+            >Cryoelectron Microscopy</skos:prefLabel>
+        <dc:title
+            >Cryoelectron Microscopy</dc:title>
+        <skos:broader rdf:resource="cellular_imaging"/>
+        <skos:broader rdf:resource="imaging"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/cytokines -->
+
+    <skos:Concept rdf:about="cytokines">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <skos:prefLabel>cytokines</skos:prefLabel>
+        <dc:title>cytokines</dc:title>
+        <terms:code>21</terms:code>
+        <skos:broader rdf:resource="cell_tissue_technologies"/>
+        <skos:broader rdf:resource="signal_transduction_techniques"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/dna_isolation_and_purification -->
+
+    <terms:Technique rdf:about="dna_isolation_and_purification">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title
+            >DNA isolation and purification</dc:title>
+        <skos:prefLabel
+            >DNA isolation and purification</skos:prefLabel>
+        <terms:code>22</terms:code>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="genome_analysis"/>
+        <skos:broader rdf:resource="high_throughput_screening"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/dna_sequencing -->
+
+    <owl:Thing rdf:about="dna_sequencing">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>23</terms:code>
+        <skos:prefLabel>DNA sequencing</skos:prefLabel>
+        <dc:title>DNA sequencing</dc:title>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="genome_analysis"/>
+        <skos:broader rdf:resource="high_throughput_screening"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/drosophila -->
+
+    <skos:Concept rdf:about="drosophila">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <terms:code>24</terms:code>
+        <skos:prefLabel>Drosophila</skos:prefLabel>
+        <dc:title>Drosophila</dc:title>
+        <skos:broader rdf:resource="model_organism"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/electrocardiography_ekg -->
+
+    <owl:Thing rdf:about="electrocardiography_ekg">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title
+            >Electrocardiography (EKG)</dc:title>
+        <skos:prefLabel
+            >Electrocardiography (EKG)</skos:prefLabel>
+        <terms:code>25</terms:code>
+        <skos:broader rdf:resource="biophysical_techniques"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/electroencephalography_eeg -->
+
+    <terms:Technique rdf:about="electroencephalography_eeg">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>26</terms:code>
+        <dc:title
+            >Electroencephalography (EEG)</dc:title>
+        <skos:prefLabel
+            >Electroencephalography (EEG)</skos:prefLabel>
+        <skos:broader rdf:resource="biophysical_techniques"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/electromyography_emg -->
+
+    <terms:Technique rdf:about="electromyography_emg">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>27</terms:code>
+        <dc:title
+            >Electromyography (EMG)</dc:title>
+        <skos:prefLabel
+            >Electromyography (EMG)</skos:prefLabel>
+        <skos:broader rdf:resource="biophysical_techniques"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/electron_microscopy -->
+
+    <terms:Technique rdf:about="electron_microscopy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>28</terms:code>
+        <skos:prefLabel
+            >Electron microscopy</skos:prefLabel>
+        <dc:title
+            >Electron microscopy</dc:title>
+        <skos:broader rdf:resource="cellular_imaging"/>
+        <skos:broader rdf:resource="imaging"/>
+        <skos:broader rdf:resource="structural_biology"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/electrophoresis -->
+
+    <skos:Concept rdf:about="electrophoresis">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <dc:title>electrophoresis</dc:title>
+        <skos:prefLabel>electrophoresis</skos:prefLabel>
+        <terms:code>29</terms:code>
+        <skos:broader rdf:resource="genome_analysis"/>
+        <skos:broader rdf:resource="molecular_biology"/>
+        <skos:broader rdf:resource="protein_techniques"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/field_potential_recordings -->
+
+    <owl:Thing rdf:about="field_potential_recordings">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title
+            >field potential recordings</dc:title>
+        <terms:code>30</terms:code>
+        <skos:prefLabel
+            >field potential recordings</skos:prefLabel>
+        <skos:broader rdf:resource="biophysical_techniques"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/flow_cytometry -->
+
+    <terms:Technique rdf:about="flow_cytometry">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>Flow Cytometry</skos:prefLabel>
+        <dc:title>Flow Cytometry</dc:title>
+        <terms:code>31</terms:code>
+        <skos:broader rdf:resource="cell_tissue_technologies"/>
+        <skos:broader rdf:resource="high_throughput_screening"/>
+        <skos:broader rdf:resource="signal_transduction_techniques"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/fluorescence_in_situ_hybridization -->
+
+    <terms:Technique rdf:about="fluorescence_in_situ_hybridization">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title
+            >Fluorescence In Situ Hybridization</dc:title>
+        <skos:prefLabel
+            >Fluorescence In Situ Hybridization</skos:prefLabel>
+        <terms:code>32</terms:code>
+        <skos:broader rdf:resource="cellular_imaging"/>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/fluorescence_resonance_energy_transfer -->
+
+    <owl:Thing rdf:about="fluorescence_resonance_energy_transfer">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title
+            >Fluorescence Resonance Energy Transfer</dc:title>
+        <terms:code>33</terms:code>
+        <skos:prefLabel
+            >Fluorescence Resonance Energy Transfer</skos:prefLabel>
+        <skos:broader rdf:resource="cellular_imaging"/>
+        <skos:broader rdf:resource="signal_transduction_techniques"/>
+        <skos:broader rdf:resource="spectroscopy"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/fluorescent_dyes -->
+
+    <terms:Technique rdf:about="fluorescent_dyes">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel
+            >Fluorescent Dyes</skos:prefLabel>
+        <dc:title
+            >Fluorescent Dyes</dc:title>
+        <terms:code>34</terms:code>
+        <skos:broader rdf:resource="cellular_imaging"/>
+        <skos:broader rdf:resource="gene_transfer"/>
+        <skos:broader rdf:resource="signal_transduction_techniques"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/fluorescent_proteins -->
+
+    <owl:Thing rdf:about="fluorescent_proteins">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title
+            >fluorescent proteins</dc:title>
+        <skos:prefLabel
+            >fluorescent proteins</skos:prefLabel>
+        <terms:code>35</terms:code>
+        <skos:broader rdf:resource="cellular_imaging"/>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="gene_transfer"/>
+        <skos:broader rdf:resource="signal_transduction_techniques"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/functional_magnetic_resonance_imaging -->
+
+    <owl:Thing rdf:about="functional_magnetic_resonance_imaging">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>36</terms:code>
+        <skos:prefLabel
+            >functional Magnetic Resonance Imaging</skos:prefLabel>
+        <dc:title
+            >functional Magnetic Resonance Imaging</dc:title>
+        <skos:broader rdf:resource="medical_and_small_animal_imaging"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/g_protein_coupled_receptors -->
+
+    <owl:Thing rdf:about="g_protein_coupled_receptors">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel
+            >G-Protein-Coupled Receptors</skos:prefLabel>
+        <dc:title
+            >G-Protein-Coupled Receptors</dc:title>
+        <terms:code>37</terms:code>
+        <skos:broader rdf:resource="signal_transduction_techniques"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/gene_expression_analysis -->
+
+    <owl:Thing rdf:about="gene_expression_analysis">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel
+            >gene expression analysis</skos:prefLabel>
+        <terms:code>38</terms:code>
+        <dc:title
+            >gene expression analysis</dc:title>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/gene_expression_profiling -->
+
+    <terms:Technique rdf:about="gene_expression_profiling">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel
+            >Gene Expression Profiling</skos:prefLabel>
+        <terms:code>39</terms:code>
+        <dc:title
+            >Gene Expression Profiling</dc:title>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="high_throughput_screening"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/gene_library -->
+
+    <owl:Thing rdf:about="gene_library">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>40</terms:code>
+        <skos:prefLabel>Gene Library</skos:prefLabel>
+        <dc:title>Gene Library</dc:title>
+        <skos:broader rdf:resource="gene_transfer"/>
+        <skos:broader rdf:resource="high_throughput_screening"/>
+        <skos:broader rdf:resource="molecular_biology"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/gene_targeting -->
+
+    <owl:Thing rdf:about="gene_targeting">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>Gene Targeting</skos:prefLabel>
+        <dc:title>Gene Targeting</dc:title>
+        <terms:code>41</terms:code>
+        <skos:broader rdf:resource="gene_transfer"/>
+        <skos:broader rdf:resource="genome_analysis"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/gene_transfer -->
+
+    <skos:Concept rdf:about="gene_transfer">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <skos:prefLabel>gene transfer</skos:prefLabel>
+        <terms:code>42</terms:code>
+        <dc:title>gene transfer</dc:title>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/genetic_association_studies -->
+
+    <owl:Thing rdf:about="genetic_association_studies">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>43</terms:code>
+        <dc:title
+            >Genetic Association Studies</dc:title>
+        <skos:prefLabel
+            >Genetic Association Studies</skos:prefLabel>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="genome_analysis"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/genetic_vectors -->
+
+    <skos:Concept rdf:about="genetic_vectors">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <dc:title>Genetic Vectors</dc:title>
+        <skos:prefLabel>Genetic Vectors</skos:prefLabel>
+        <terms:code>44</terms:code>
+        <skos:broader rdf:resource="cell_tissue_technologies"/>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="gene_transfer"/>
+        <skos:broader rdf:resource="genome_analysis"/>
+        <skos:broader rdf:resource="molecular_biology"/>
+        <skos:broader rdf:resource="signal_transduction_techniques"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/genome_analysis -->
+
+    <skos:Concept rdf:about="genome_analysis">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <skos:prefLabel>genome analysis</skos:prefLabel>
+        <dc:title>genome analysis</dc:title>
+        <terms:code>45</terms:code>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/genotype -->
+
+    <owl:Thing rdf:about="genotype">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>46</terms:code>
+        <skos:prefLabel>genotype</skos:prefLabel>
+        <dc:title>genotype</dc:title>
+        <skos:broader rdf:resource="genome_analysis"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/high_thoughput_screening_assays -->
+
+    <terms:Technique rdf:about="high_thoughput_screening_assays">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel
+            >high-thoughput screening assays</skos:prefLabel>
+        <terms:code>47</terms:code>
+        <dc:title
+            >high-thoughput screening assays</dc:title>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="gene_transfer"/>
+        <skos:broader rdf:resource="genome_analysis"/>
+        <skos:broader rdf:resource="high_throughput_screening"/>
+        <skos:broader rdf:resource="imaging"/>
+        <skos:broader rdf:resource="protein_techniques"/>
+        <skos:broader rdf:resource="signal_transduction_techniques"/>
+        <skos:broader rdf:resource="structural_biology"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/high_throughput_microscopy -->
+
+    <owl:Thing rdf:about="high_throughput_microscopy">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title
+            >high-throughput microscopy</dc:title>
+        <terms:code>48</terms:code>
+        <skos:prefLabel
+            >high-throughput microscopy</skos:prefLabel>
+        <skos:broader rdf:resource="cellular_imaging"/>
+        <skos:broader rdf:resource="high_throughput_screening"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/high_throughput_screening -->
+
+    <terms:Technique rdf:about="high_throughput_screening">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title
+            >high throughput screening</dc:title>
+        <terms:code>49</terms:code>
+        <skos:prefLabel
+            >high throughput screening</skos:prefLabel>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/imaging -->
+
+    <owl:Thing rdf:about="imaging">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>imaging</skos:prefLabel>
+        <terms:code>50</terms:code>
+        <dc:title>imaging</dc:title>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/immunohistochemistry -->
+
+    <owl:Thing rdf:about="immunohistochemistry">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title
+            >immunohistochemistry</dc:title>
+        <terms:code>51</terms:code>
+        <skos:prefLabel
+            >immunohistochemistry</skos:prefLabel>
+        <skos:broader rdf:resource="cell_tissue_technologies"/>
+        <skos:broader rdf:resource="protein_techniques"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/induced_pluripotent_stem_cells -->
+
+    <terms:Technique rdf:about="induced_pluripotent_stem_cells">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title
+            >induced pluripotent stem cells</dc:title>
+        <skos:prefLabel
+            >induced pluripotent stem cells</skos:prefLabel>
+        <terms:code>52</terms:code>
+        <skos:broader rdf:resource="cell_tissue_technologies"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/kinases -->
+
+    <skos:Concept rdf:about="kinases">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <dc:title>kinases</dc:title>
+        <terms:code>53</terms:code>
+        <skos:prefLabel>kinases</skos:prefLabel>
+        <skos:broader rdf:resource="signal_transduction_techniques"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/label_free_detection -->
+
+    <terms:Technique rdf:about="label_free_detection">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>54</terms:code>
+        <skos:prefLabel
+            >label-free detection</skos:prefLabel>
+        <dc:title
+            >label-free detection</dc:title>
+        <skos:broader rdf:resource="molecular_detection"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/label_free_imaging -->
+
+    <skos:Concept rdf:about="label_free_imaging">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <dc:title
+            >label-free imaging</dc:title>
+        <skos:prefLabel
+            >label-free imaging</skos:prefLabel>
+        <terms:code>55</terms:code>
+        <skos:broader rdf:resource="cellular_imaging"/>
+        <skos:broader rdf:resource="imaging"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/laboratory_automation -->
+
+    <terms:Technique rdf:about="laboratory_automation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel
+            >Laboratory Automation</skos:prefLabel>
+        <terms:code>56</terms:code>
+        <dc:title
+            >Laboratory Automation</dc:title>
+        <skos:broader rdf:resource="cell_tissue_technologies"/>
+        <skos:broader rdf:resource="cellular_imaging"/>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="gene_transfer"/>
+        <skos:broader rdf:resource="genome_analysis"/>
+        <skos:broader rdf:resource="high_throughput_screening"/>
+        <skos:broader rdf:resource="molecular_biology"/>
+        <skos:broader rdf:resource="protein_techniques"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/magnetic_resonance_imaging -->
+
+    <owl:Thing rdf:about="magnetic_resonance_imaging">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel
+            >Magnetic Resonance Imaging</skos:prefLabel>
+        <dc:title
+            >Magnetic Resonance Imaging</dc:title>
+        <terms:code>57</terms:code>
+        <skos:broader rdf:resource="medical_and_small_animal_imaging"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/mass_spectrometry -->
+
+    <skos:Concept rdf:about="mass_spectrometry">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <terms:code>58</terms:code>
+        <skos:prefLabel
+            >Mass Spectrometry</skos:prefLabel>
+        <dc:title
+            >Mass Spectrometry</dc:title>
+        <skos:broader rdf:resource="imaging"/>
+        <skos:broader rdf:resource="molecular_detection"/>
+        <skos:broader rdf:resource="protein_techniques"/>
+        <skos:broader rdf:resource="structural_biology"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/medical_and_small_animal_imaging -->
+
+    <skos:Concept rdf:about="medical_and_small_animal_imaging">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <terms:code>59</terms:code>
+        <skos:prefLabel
+            >medical and small animal imaging</skos:prefLabel>
+        <dc:title
+            >medical and small animal imaging</dc:title>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/mice -->
+
+    <terms:Technique rdf:about="mice">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title>Mice</dc:title>
+        <skos:prefLabel>Mice</skos:prefLabel>
+        <terms:code>60</terms:code>
+        <skos:broader rdf:resource="model_organism"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/microarray_analysis -->
+
+    <skos:Concept rdf:about="microarray_analysis">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <terms:code>61</terms:code>
+        <skos:prefLabel
+            >Microarray Analysis</skos:prefLabel>
+        <dc:title
+            >Microarray Analysis</dc:title>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="genome_analysis"/>
+        <skos:broader rdf:resource="high_throughput_screening"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/microfluidics -->
+
+    <owl:Thing rdf:about="microfluidics">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title>microfluidics</dc:title>
+        <terms:code>62</terms:code>
+        <skos:prefLabel>microfluidics</skos:prefLabel>
+        <skos:broader rdf:resource="cell_tissue_technologies"/>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="gene_transfer"/>
+        <skos:broader rdf:resource="genome_analysis"/>
+        <skos:broader rdf:resource="high_throughput_screening"/>
+        <skos:broader rdf:resource="molecular_biology"/>
+        <skos:broader rdf:resource="molecular_detection"/>
+        <skos:broader rdf:resource="protein_techniques"/>
+        <skos:broader rdf:resource="structural_biology"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/microscopy -->
+
+    <terms:Technique rdf:about="microscopy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>63</terms:code>
+        <skos:prefLabel>microscopy</skos:prefLabel>
+        <dc:title>microscopy</dc:title>
+        <skos:broader rdf:resource="cellular_imaging"/>
+        <skos:broader rdf:resource="signal_transduction_techniques"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/model_organism -->
+
+    <skos:Concept rdf:about="model_organism">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <terms:code>64</terms:code>
+        <dc:title>model organism</dc:title>
+        <skos:prefLabel>model organism</skos:prefLabel>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/molecular_biology -->
+
+    <skos:Concept rdf:about="molecular_biology">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <terms:code>65</terms:code>
+        <skos:prefLabel
+            >molecular biology</skos:prefLabel>
+        <dc:title
+            >molecular biology</dc:title>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/molecular_cloning -->
+
+    <terms:Technique rdf:about="molecular_cloning">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel
+            >molecular cloning</skos:prefLabel>
+        <dc:title
+            >molecular cloning</dc:title>
+        <terms:code>66</terms:code>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="gene_transfer"/>
+        <skos:broader rdf:resource="genome_analysis"/>
+        <skos:broader rdf:resource="molecular_biology"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/molecular_detection -->
+
+    <terms:Technique rdf:about="molecular_detection">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel
+            >molecular detection</skos:prefLabel>
+        <dc:title
+            >molecular detection</dc:title>
+        <terms:code>67</terms:code>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/motor_activity -->
+
+    <terms:Technique rdf:about="motor_activity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title>Motor Activity</dc:title>
+        <skos:prefLabel>Motor Activity</skos:prefLabel>
+        <terms:code>68</terms:code>
+        <skos:broader rdf:resource="behavioral_methods"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/multiphoton_microscopy -->
+
+    <owl:Thing rdf:about="multiphoton_microscopy">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel
+            >multiphoton microscopy</skos:prefLabel>
+        <terms:code>69</terms:code>
+        <dc:title
+            >multiphoton microscopy</dc:title>
+        <skos:broader rdf:resource="cellular_imaging"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/mutagenesis -->
+
+    <owl:Thing rdf:about="mutagenesis">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>Mutagenesis</skos:prefLabel>
+        <dc:title>Mutagenesis</dc:title>
+        <terms:code>70</terms:code>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="gene_transfer"/>
+        <skos:broader rdf:resource="genome_analysis"/>
+        <skos:broader rdf:resource="molecular_biology"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/nucleic_acid_labeling_and_detection -->
+
+    <skos:Concept rdf:about="nucleic_acid_labeling_and_detection">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <skos:prefLabel
+            >nucleic acid labeling and detection</skos:prefLabel>
+        <terms:code>71</terms:code>
+        <dc:title
+            >nucleic acid labeling and detection</dc:title>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="genome_analysis"/>
+        <skos:broader rdf:resource="molecular_biology"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/oligonucleotides -->
+
+    <skos:Concept rdf:about="oligonucleotides">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <dc:title
+            >Oligonucleotides</dc:title>
+        <terms:code>72</terms:code>
+        <skos:prefLabel
+            >Oligonucleotides</skos:prefLabel>
+        <skos:broader rdf:resource="cell_tissue_technologies"/>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="gene_transfer"/>
+        <skos:broader rdf:resource="genome_analysis"/>
+        <skos:broader rdf:resource="molecular_biology"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/optical_tweezers -->
+
+    <owl:Thing rdf:about="optical_tweezers">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>73</terms:code>
+        <dc:title
+            >Optical Tweezers</dc:title>
+        <skos:prefLabel
+            >Optical Tweezers</skos:prefLabel>
+        <skos:broader rdf:resource="molecular_detection"/>
+        <skos:broader rdf:resource="structural_biology"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/patch_clamp_techniques -->
+
+    <skos:Concept rdf:about="patch_clamp_techniques">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <dc:title
+            >Patch Clamp Techniques</dc:title>
+        <skos:prefLabel
+            >Patch Clamp Techniques</skos:prefLabel>
+        <terms:code>74</terms:code>
+        <skos:broader rdf:resource="biophysical_techniques"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/peptide_library -->
+
+    <owl:Thing rdf:about="peptide_library">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>Peptide Library</skos:prefLabel>
+        <terms:code>75</terms:code>
+        <dc:title>Peptide Library</dc:title>
+        <skos:broader rdf:resource="high_throughput_screening"/>
+        <skos:broader rdf:resource="protein_techniques"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/plant -->
+
+    <skos:Concept rdf:about="plant">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <terms:code>76</terms:code>
+        <skos:prefLabel>plant</skos:prefLabel>
+        <dc:title>plant</dc:title>
+        <skos:broader rdf:resource="model_organism"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/polymerase_chain_reaction -->
+
+    <skos:Concept rdf:about="polymerase_chain_reaction">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <dc:title
+            >Polymerase Chain Reaction</dc:title>
+        <terms:code>77</terms:code>
+        <skos:prefLabel
+            >Polymerase Chain Reaction</skos:prefLabel>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="genome_analysis"/>
+        <skos:broader rdf:resource="molecular_biology"/>
+        <skos:broader rdf:resource="molecular_detection"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/positron_emission_tomography -->
+
+    <skos:Concept rdf:about="positron_emission_tomography">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <terms:code>78</terms:code>
+        <skos:prefLabel
+            >Positron-Emission Tomography</skos:prefLabel>
+        <dc:title
+            >Positron-Emission Tomography</dc:title>
+        <skos:broader rdf:resource="medical_and_small_animal_imaging"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/protein_array_analysis -->
+
+    <owl:Thing rdf:about="protein_array_analysis">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title
+            >Protein Array Analysis</dc:title>
+        <skos:prefLabel
+            >Protein Array Analysis</skos:prefLabel>
+        <terms:code>79</terms:code>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="high_throughput_screening"/>
+        <skos:broader rdf:resource="protein_techniques"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/protein_expression -->
+
+    <skos:Concept rdf:about="protein_expression">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <terms:code>80</terms:code>
+        <skos:prefLabel
+            >Protein expression</skos:prefLabel>
+        <dc:title
+            >Protein expression</dc:title>
+        <skos:broader rdf:resource="protein_techniques"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/protein_sequence_analysis -->
+
+    <owl:Thing rdf:about="protein_sequence_analysis">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel
+            >Protein Sequence Analysis</skos:prefLabel>
+        <dc:title
+            >Protein Sequence Analysis</dc:title>
+        <terms:code>81</terms:code>
+        <skos:broader rdf:resource="protein_techniques"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/protein_techniques -->
+
+    <owl:Thing rdf:about="protein_techniques">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>82</terms:code>
+        <skos:prefLabel
+            >protein techniques</skos:prefLabel>
+        <dc:title
+            >protein techniques</dc:title>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/proteins_isolation_and_purification -->
+
+    <owl:Thing rdf:about="proteins_isolation_and_purification">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title
+            >Proteins isolation and purification</dc:title>
+        <skos:prefLabel
+            >Proteins isolation and purification</skos:prefLabel>
+        <terms:code>83</terms:code>
+        <skos:broader rdf:resource="protein_techniques"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/proteomics -->
+
+    <terms:Technique rdf:about="proteomics">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>Proteomics</skos:prefLabel>
+        <dc:title>Proteomics</dc:title>
+        <terms:code>84</terms:code>
+        <skos:broader rdf:resource="protein_techniques"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/quantum_dots -->
+
+    <terms:Technique rdf:about="quantum_dots">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>Quantum Dots</skos:prefLabel>
+        <terms:code>85</terms:code>
+        <dc:title>Quantum Dots</dc:title>
+        <skos:broader rdf:resource="cellular_imaging"/>
+        <skos:broader rdf:resource="gene_transfer"/>
+        <skos:broader rdf:resource="medical_and_small_animal_imaging"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/rats -->
+
+    <terms:Technique rdf:about="rats">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title>Rats</dc:title>
+        <terms:code>86</terms:code>
+        <skos:prefLabel>Rats</skos:prefLabel>
+        <skos:broader rdf:resource="model_organism"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/reporter_genes -->
+
+    <owl:Thing rdf:about="reporter_genes">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title>Reporter genes</dc:title>
+        <skos:prefLabel>Reporter genes</skos:prefLabel>
+        <terms:code>87</terms:code>
+        <skos:broader rdf:resource="cell_tissue_technologies"/>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="gene_transfer"/>
+        <skos:broader rdf:resource="genome_analysis"/>
+        <skos:broader rdf:resource="imaging"/>
+        <skos:broader rdf:resource="medical_and_small_animal_imaging"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/reverse_transcriptase_polymerase_chain_reaction -->
+
+    <skos:Concept rdf:about="reverse_transcriptase_polymerase_chain_reaction">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <skos:prefLabel
+            >Reverse Transcriptase Polymerase Chain Reaction</skos:prefLabel>
+        <terms:code>88</terms:code>
+        <dc:title
+            >Reverse Transcriptase Polymerase Chain Reaction</dc:title>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="genome_analysis"/>
+        <skos:broader rdf:resource="high_throughput_screening"/>
+        <skos:broader rdf:resource="molecular_biology"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/rna_interference -->
+
+    <owl:Thing rdf:about="rna_interference">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel
+            >RNA interference</skos:prefLabel>
+        <terms:code>89</terms:code>
+        <dc:title
+            >RNA interference</dc:title>
+        <skos:broader rdf:resource="cell_tissue_technologies"/>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="gene_transfer"/>
+        <skos:broader rdf:resource="molecular_biology"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/rna_isolation_and_purification -->
+
+    <skos:Concept rdf:about="rna_isolation_and_purification">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <terms:code>90</terms:code>
+        <dc:title
+            >RNA isolation and purification</dc:title>
+        <skos:prefLabel
+            >RNA isolation and purification</skos:prefLabel>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="genome_analysis"/>
+        <skos:broader rdf:resource="high_throughput_screening"/>
+        <skos:broader rdf:resource="molecular_biology"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/rna_sequencing -->
+
+    <terms:Technique rdf:about="rna_sequencing">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>91</terms:code>
+        <skos:prefLabel>RNA sequencing</skos:prefLabel>
+        <dc:title>RNA sequencing</dc:title>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="genome_analysis"/>
+        <skos:broader rdf:resource="high_throughput_screening"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/rnai_screens -->
+
+    <skos:Concept rdf:about="rnai_screens">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <dc:title>RNAi screens</dc:title>
+        <skos:prefLabel>RNAi screens</skos:prefLabel>
+        <terms:code>92</terms:code>
+        <skos:broader rdf:resource="cell_tissue_technologies"/>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="gene_transfer"/>
+        <skos:broader rdf:resource="high_throughput_screening"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/robotics -->
+
+    <terms:Technique rdf:about="robotics">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>93</terms:code>
+        <dc:title>Robotics</dc:title>
+        <skos:prefLabel>Robotics</skos:prefLabel>
+        <skos:broader rdf:resource="behavioral_methods"/>
+        <skos:broader rdf:resource="cell_tissue_technologies"/>
+        <skos:broader rdf:resource="cellular_imaging"/>
+        <skos:broader rdf:resource="gene_transfer"/>
+        <skos:broader rdf:resource="genome_analysis"/>
+        <skos:broader rdf:resource="high_throughput_screening"/>
+        <skos:broader rdf:resource="molecular_biology"/>
+        <skos:broader rdf:resource="protein_techniques"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/self_administration_of_drugs -->
+
+    <skos:Concept rdf:about="self_administration_of_drugs">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <skos:prefLabel
+            >Self Administration of drugs</skos:prefLabel>
+        <dc:title
+            >Self Administration of drugs</dc:title>
+        <terms:code>94</terms:code>
+        <skos:broader rdf:resource="behavioral_methods"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/signal_transduction -->
+
+    <owl:Thing rdf:about="signal_transduction">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>95</terms:code>
+        <dc:title
+            >signal transduction</dc:title>
+        <skos:prefLabel
+            >signal transduction</skos:prefLabel>
+        <skos:broader rdf:resource="cell_tissue_technologies"/>
+        <skos:broader rdf:resource="signal_transduction_techniques"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/signal_transduction_techniques -->
+
+    <skos:Concept rdf:about="signal_transduction_techniques">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <terms:code>96</terms:code>
+        <dc:title
+            >signal transduction techniques</dc:title>
+        <skos:prefLabel
+            >signal transduction techniques</skos:prefLabel>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/single_channel_recordings -->
+
+    <terms:Technique rdf:about="single_channel_recordings">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>97</terms:code>
+        <dc:title
+            >single-channel recordings</dc:title>
+        <skos:prefLabel
+            >single-channel recordings</skos:prefLabel>
+        <skos:broader rdf:resource="biophysical_techniques"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/small_molecule_library -->
+
+    <terms:Technique rdf:about="small_molecule_library">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>98</terms:code>
+        <skos:prefLabel
+            >small molecule library</skos:prefLabel>
+        <dc:title
+            >small molecule library</dc:title>
+        <skos:broader rdf:resource="high_throughput_screening"/>
+        <skos:broader rdf:resource="signal_transduction_techniques"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/spectroscopy -->
+
+    <owl:Thing rdf:about="spectroscopy">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title>spectroscopy</dc:title>
+        <terms:code>99</terms:code>
+        <skos:prefLabel>spectroscopy</skos:prefLabel>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/stem_cells -->
+
+    <skos:Concept rdf:about="stem_cells">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <dc:title>stem cells</dc:title>
+        <terms:code>100</terms:code>
+        <skos:prefLabel>stem cells</skos:prefLabel>
+        <skos:broader rdf:resource="cell_tissue_technologies"/>
+        <skos:broader rdf:resource="gene_transfer"/>
+        <skos:broader rdf:resource="genome_analysis"/>
+        <skos:broader rdf:resource="signal_transduction_techniques"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/structural_biology -->
+
+    <terms:Technique rdf:about="structural_biology">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title
+            >structural biology</dc:title>
+        <skos:prefLabel
+            >structural biology</skos:prefLabel>
+        <terms:code>101</terms:code>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/super_resolution_imaging -->
+
+    <skos:Concept rdf:about="super_resolution_imaging">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <dc:title
+            >super-resolution imaging</dc:title>
+        <skos:prefLabel
+            >super-resolution imaging</skos:prefLabel>
+        <terms:code>102</terms:code>
+        <skos:broader rdf:resource="cellular_imaging"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/surface_plasmon_resonance -->
+
+    <terms:Technique rdf:about="surface_plasmon_resonance">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>103</terms:code>
+        <skos:prefLabel
+            >Surface Plasmon Resonance</skos:prefLabel>
+        <dc:title
+            >Surface Plasmon Resonance</dc:title>
+        <skos:broader rdf:resource="molecular_detection"/>
+        <skos:broader rdf:resource="protein_techniques"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/telemetry -->
+
+    <owl:Thing rdf:about="telemetry">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>Telemetry</skos:prefLabel>
+        <dc:title>Telemetry</dc:title>
+        <terms:code>104</terms:code>
+        <skos:broader rdf:resource="behavioral_methods"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/tissue_array_analysis -->
+
+    <skos:Concept rdf:about="tissue_array_analysis">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <dc:title
+            >Tissue Array Analysis</dc:title>
+        <skos:prefLabel
+            >Tissue Array Analysis</skos:prefLabel>
+        <terms:code>105</terms:code>
+        <skos:broader rdf:resource="cell_tissue_technologies"/>
+        <skos:broader rdf:resource="cellular_imaging"/>
+        <skos:broader rdf:resource="high_throughput_screening"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/tissue_culture_techniques -->
+
+    <skos:Concept rdf:about="tissue_culture_techniques">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <terms:code>106</terms:code>
+        <skos:prefLabel
+            >Tissue Culture Techniques</skos:prefLabel>
+        <dc:title
+            >Tissue Culture Techniques</dc:title>
+        <skos:broader rdf:resource="cell_tissue_technologies"/>
+        <skos:broader rdf:resource="signal_transduction_techniques"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/tissue_engineering -->
+
+    <terms:Technique rdf:about="tissue_engineering">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title
+            >tissue engineering</dc:title>
+        <terms:code>107</terms:code>
+        <skos:prefLabel
+            >tissue engineering</skos:prefLabel>
+        <skos:broader rdf:resource="cell_tissue_technologies"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/transduction -->
+
+    <terms:Technique rdf:about="transduction">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>Transduction</skos:prefLabel>
+        <terms:code>108</terms:code>
+        <dc:title>Transduction</dc:title>
+        <skos:broader rdf:resource="cell_tissue_technologies"/>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="gene_transfer"/>
+        <skos:broader rdf:resource="high_throughput_screening"/>
+        <skos:broader rdf:resource="signal_transduction_techniques"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/transfection -->
+
+    <terms:Technique rdf:about="transfection">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title>Transfection</dc:title>
+        <terms:code>109</terms:code>
+        <skos:prefLabel>Transfection</skos:prefLabel>
+        <skos:broader rdf:resource="cell_tissue_technologies"/>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="gene_transfer"/>
+        <skos:broader rdf:resource="high_throughput_screening"/>
+        <skos:broader rdf:resource="signal_transduction_techniques"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/transgenic_mice -->
+
+    <owl:Thing rdf:about="transgenic_mice">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>110</terms:code>
+        <dc:title>Transgenic mice</dc:title>
+        <skos:prefLabel>Transgenic mice</skos:prefLabel>
+        <skos:broader rdf:resource="model_organism"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/two_hybrid_system_techniques -->
+
+    <terms:Technique rdf:about="two_hybrid_system_techniques">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>111</terms:code>
+        <dc:title
+            >Two-Hybrid System Techniques</dc:title>
+        <skos:prefLabel
+            >Two-Hybrid System Techniques</skos:prefLabel>
+        <skos:broader rdf:resource="gene_expression_analysis"/>
+        <skos:broader rdf:resource="genome_analysis"/>
+        <skos:broader rdf:resource="high_throughput_screening"/>
+        <skos:broader rdf:resource="protein_techniques"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/x_ray_crystallography -->
+
+    <owl:Thing rdf:about="x_ray_crystallography">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <dc:title
+            >X-Ray Crystallography</dc:title>
+        <terms:code>112</terms:code>
+        <skos:prefLabel
+            >X-Ray Crystallography</skos:prefLabel>
+        <skos:broader rdf:resource="protein_techniques"/>
+        <skos:broader rdf:resource="structural_biology"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://ns.nature.com/techniques/x_ray_tomography -->
+
+    <terms:Technique rdf:about="x_ray_tomography">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>113</terms:code>
+        <dc:title
+            >X-Ray Tomography</dc:title>
+        <skos:prefLabel
+            >X-Ray Tomography</skos:prefLabel>
+        <skos:broader rdf:resource="imaging"/>
+    </terms:Technique>
+    
+
+
+    <!-- http://ns.nature.com/techniques/xenopus_laevis -->
+
+    <skos:Concept rdf:about="xenopus_laevis">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <skos:prefLabel>Xenopus laevis</skos:prefLabel>
+        <terms:code>114</terms:code>
+        <dc:title>Xenopus laevis</dc:title>
+        <skos:broader rdf:resource="model_organism"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/yeasts -->
+
+    <skos:Concept rdf:about="yeasts">
+        <rdf:type rdf:resource="http://ns.nature.com/terms/Technique"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <terms:code>115</terms:code>
+        <dc:title>Yeasts</dc:title>
+        <skos:prefLabel>Yeasts</skos:prefLabel>
+        <skos:broader rdf:resource="model_organism"/>
+    </skos:Concept>
+    
+
+
+    <!-- http://ns.nature.com/techniques/zebrafish -->
+
+    <terms:Technique rdf:about="zebrafish">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <terms:code>116</terms:code>
+        <dc:title>Zebrafish</dc:title>
+        <skos:prefLabel>Zebrafish</skos:prefLabel>
+        <skos:broader rdf:resource="model_organism"/>
+    </terms:Technique>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

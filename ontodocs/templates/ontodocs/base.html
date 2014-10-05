@@ -1,0 +1,119 @@
+{# July 1, 2014: added when upgraded to Bootstrap 3.2 #}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	{% block pagetitle %}
+		<title>OntospyWeb</title>
+		{# 8835 9776 #}
+	{% endblock pagetitle %}
+	
+
+    <!-- Bootstrap -->
+    <link href="{{ STATIC_URL }}bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+		
+	<link href="{{ STATIC_URL }}ontodocs/ontodocs.css" rel="stylesheet">	
+	
+	{% block extrahead %}
+	
+		
+		
+	{% endblock extrahead %}	
+		
+		
+  </head>
+  <body>
+	  
+	
+	
+	{% block navbar %}
+	
+		{% include "ontodocs/components/navbar_onto.html" %}
+	
+	{% endblock navbar %}  
+
+
+
+
+	{% if messages %}   {# not tested yet #}
+	
+	    {% for message in messages %}
+	        <div class="lead alert alert-warning alert-dismissable text-center message-div" style="margin-top: -21px;">
+	            <button type="button" class="close" data-dismiss="alert">×</button>
+	            {{ message|safe }}
+	        </div>
+			
+		
+	    {% endfor %}
+			
+			<script type="text/javascript">
+				setTimeout(function(){$("div.message-div").fadeOut("slow")}, 3000);
+			</script>
+			
+	{% endif %}
+	
+	
+	
+	
+	  <div class="container main-container">
+	  
+	  
+	  	{% block pagecontents %}
+		
+	  		<h1>Hello, world!</h1>
+	  	
+		
+		{% endblock pagecontents %}
+	
+		
+	  </div>
+	  
+	  
+	{% block footer %}  
+	<div class="footer">
+		
+		
+			{# eg #}
+			
+		  <div class="container">
+			  <br />
+		    	<p class="text-muted text-center">Last updated on [2014-10-03]</p>
+		  </div>
+	  
+	  
+	</div>
+	{% endblock footer %}
+	  
+  
+	
+
+	  
+	  
+	  
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+    <script src="{{ STATIC_URL }}jquery/jquery-1.7.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{ STATIC_URL }}bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+	
+	{% block global_js  %}
+
+	{% endblock  %}
+	
+	
+	
+  </body>
+</html>

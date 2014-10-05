@@ -1,0 +1,168 @@
+
+{% load ontotags %}
+
+
+
+<div class="page-header">
+  <h3>	
+	  Object properties   	  
+  </h3>	  
+  
+  
+</div>
+
+
+<div class="well">
+	{{objpropertiesTree|safe}}
+</div>
+
+
+{% for propData in objPropertiesData  %}
+	
+<div class="row">
+	
+  	<div class="page-header">
+  	  <h3>
+
+		 <a title="{{propData.prop.prop}}" class="propcolor" name="{{propData.prop.propname}}">
+			 &gt; {{propData.prop.propname}}
+		 </a>
+	  
+	    {% include "ontodocs/components/backtotop.html" %}
+	  
+  	  </h3>	  
+
+  	</div>
+
+</div>	
+
+
+
+
+<div class="row entityDescriptionRow" >
+	
+	<div class="col-sm-5 col-md-5">
+		
+		
+		{% if propData.supers %}
+		<div id="superproperties">
+		
+			<br />
+			<h4 class="text-muted">rdfs:subPropertyOf</h4>	
+	
+			<p class="" style="margin-left: 20px;">
+
+			  {% for prop in propData.supers  %}
+		 	 	
+				<a title="{{prop.prop}}" href="#{{prop.propname}}" class="propcolor">
+					{{prop.propname|truncchar_inverse:50}}
+				</a>
+				{% if not forloop.last %}&nbsp;|&nbsp;{% endif %}
+			  {% endfor %}
+			  
+  			</p>
+
+		  
+		</div>
+		{% endif %}
+		
+
+
+	  {% if propData.prop.domain %}
+		<br /><h4>rdfs:domain</h4>
+
+	    {% for class in propData.prop.domain  %}    
+
+	  	<p class="" style="margin-left: 20px;">
+	    	{% if class.isdefined %}
+	    	<a title="{{class.class}}" href="#{{class.classname}}" class="rdfclass">{{class.classname|truncchar_inverse:30}}</a> 
+	    	{% else %}
+	    	{{class.classname|truncchar_inverse:30}}
+	    	{% endif %}
+	 	 </p>
+
+	    {% endfor %}
+
+	  {% else %}
+	  	<br /><h4>rdfs:domain</h4>
+		  	<p class="" style="margin-left: 20px;">
+		 	 	<a title="Go to top" href="#top" class="rdfclass">
+					owl:Thing
+				</a>
+				<span class="text-muted">(inferred)</span>
+		 	 </p>
+  
+	  {% endif %}
+
+
+
+	  {% if propData.prop.range %}
+		<br /><h4>rdfs:range</h4>
+
+		    {% for class in propData.prop.range  %}    
+
+		  	<p class="" style="margin-left: 20px;">
+		    	{% if class.isdefined %}
+		    	<a title="{{class.class}}" href="#{{class.classname}}" class="rdfclass">{{class.classname|truncchar_inverse:30}}</a> 
+		    	{% else %}
+		    	{{class.classname|truncchar_inverse:30}}
+		    	{% endif %}
+		 	 </p>
+
+	 		{% endfor %}
+	
+  	  {% else %}
+  
+  	  	<br /><h4>rdfs:range</h4>
+  		  	<p class="" style="margin-left: 20px;">
+  		 	 	<a title="Go to top" href="#top" class="rdfclass">
+  					owl:Thing
+  				</a>
+				<span class="text-muted">(inferred)</span>
+  		 	 </p>
+		 
+	  {% endif %}
+
+
+
+
+		
+		
+	</div>
+
+
+
+	<div class="col-sm-7 col-md-6">  {# col-md-offset-1 #}
+		
+	
+		<div id="triples">
+		
+		
+		    {% for name, value in propData.alltriples  %}
+		  		{% ifchanged name %}
+					<br />
+					<h4>{{name}}</h4>
+				{% endifchanged %}
+
+		    	<p class="" style="margin-left: 20px;">
+		        	{{value|linebreaksbr}}
+		   	 	</p>
+
+		    {% endfor %}
+		
+		
+		</div>		
+
+
+		
+	</div>
+	
+	
+
+
+
+</div>	
+
+	
+{% endfor %}
+

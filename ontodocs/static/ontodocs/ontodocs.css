@@ -1,0 +1,195 @@
+/*===========
+October 1, 2014
+===========*/
+
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+/*  bottom: 0;*/
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+.main-container {
+    margin-bottom: 100px;
+}
+
+
+/* ONTODOCS styles
+-------------------------------------------------- */
+
+
+
+/*note: this does not have effect on class/prop trees */
+.propcolor {color: darkcyan;}
+.propcolor:hover {color: darkgreen;}
+
+.rdfentity {
+  background: white;
+  border: 1px solid #e1e1e8;
+  font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+  font-size: 70%;
+}	
+
+.rdfclass {
+  color: #C00000;
+}
+
+
+.rdfinstance {
+	color: #0C6D33;
+}		
+
+#stats_table td {vertical-align: middle;}
+#stats_table p {margin: 10px 0px 10px 0px;}
+
+
+
+h3 a.rdfclass:hover {
+    color: #AB0000;
+    text-decoration: none;
+}
+
+
+.backtotop {
+    font-size: 70%;
+    text-align: right;
+    margin-top: -25px;
+}
+
+.jumptobottom {
+    font-size: 70%;
+    text-align: right;
+/*    margin-top: -25px;*/
+}
+
+/*font-size: 70%;
+margin-top: 27px;
+margin-bottom: -5px;*/
+
+
+.entityDescriptionRow {
+  margin-bottom: 80px;" 
+}
+
+.namespaces {
+  padding: 40px;
+}
+
+/*.namespaces-container {
+    background: grey;
+}*/
+
+/*#footer {
+  height: 60px;
+  background-color: #EFEEEC;
+}*/
+
+/*.bottom-footer {
+    background-image: linear-gradient(to bottom,#222,#111);
+    height: 60px;
+}*/
+
+
+
+
+
+
+/* css for class and property trees using schema.org style */
+
+table.h, .h tr, .h td
+	{
+		border: none;
+		margin: 0;
+		padding: 0;
+		border-collapse: collapse; 
+	font-size: 16px;
+	line-height: 22px;
+	}
+.h .space
+	{
+		width: 20px
+	}
+.h .bar
+	{
+		background-color: #000;
+		width: 1px
+	}
+.h .tc
+	{
+		text-indent: -21px;
+		padding-left: 21px
+	}
+
+
+ table.h a:link
+{
+/*    color: #d9230f;*/
+	text-decoration: none;
+	border-bottom: dotted 1px ; /*#d9230f*/
+}
+ table.h a:visited
+{
+/*    color: #990000;*/
+	text-decoration: none;
+	border-bottom: dotted 1px;  /*#990000*/
+}
+table.h a:hover
+{
+	border-bottom: none;
+/*    color: #fff;*/
+/*    background-color: #d9230f;*/
+	text-decoration: none;
+}
+
+
+ table.h.propcolor a:link
+{
+/*    color: darkcyan;*/
+	text-decoration: none;
+	border-bottom: dotted 1px green;
+}
+ table.h.propcolor a:visited
+{
+/*    color: darkgreen;*/
+	text-decoration: none;
+	border-bottom: dotted 1px #990000;
+}
+table.h.propcolor a:hover
+{
+/*    background-color: darkcyan;*/
+	border-bottom: none;
+/*    color: #fff;*/
+	text-decoration: none;
+}
+
+	
+
+/* css for property-tables in class views	*/
+/* --------------------------------------	*/
+
+
+table.classproperties {border: 1px solid #98A0A6; border-collapse: separate; border-spacing: 6px;}
+table.classproperties tr {text-align: left;}
+table.classproperties td {padding: 10px;}
+table.classproperties td.firsttd {width: 20%; background: #EEEEEE;}
+table.classproperties td.secondtd {width: 20%;}
+table.classproperties th {background: #EEEEEE; padding-left: 5px;}
+
+table.classproperties h4 {color: gray;}
+
+
+

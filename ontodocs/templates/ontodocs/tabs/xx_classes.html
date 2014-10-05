@@ -1,0 +1,271 @@
+{% extends "ontoview/base.html" %}
+{% load ontotags %}
+
+
+{% block pagecontents %}
+
+
+{% include "ontoview/components/tabs.html" %}
+
+
+{% if resource404 %}
+
+	<div class="page-header">
+  	  <h3>Not found...</h3>
+	</div>
+
+	<p>Sorry the resource <code>{{resource}}</code> wasn't found in this ontology.
+	<br /><br />
+	
+{% endif %}
+
+
+
+{% if class %}
+
+
+	<div class="page-header">
+	  <h3>
+		  <a title="Back to class tree" href="{% url classes %}?model={{ontoFile}}" class="rdfclass">All</a>&nbsp;>
+		  {% for class in alltree  %}
+			  {% if forloop.last %}<a title="{{class.class}}" href="{% url classes %}?model={{ontoFile}}&resource={{class.class|encodeuri}}" class="rdfclass">{{class.classname|truncchar_inverse:50}}</a>
+			  {% else %}
+			  		<a title="{{class.class}}" href="{% url classes %}?model={{ontoFile}}&resource={{class.class|encodeuri}}" class="rdfclass">{{class.classname|truncchar_inverse:50}}</a>&nbsp;>
+					{% endif %}
+		  {% endfor %}
+		  
+		  
+		  
+	  </h3>	  
+	</div>
+
+
+  {# show only first comment #}
+  {# <p class="lead">{{class.comment.0}}</p> #}
+  {# 	 #}
+  {# <br /> #}
+
+
+
+  {% for name, value in alltriples  %}
+	{% ifchanged name %}<br /><h4>{{name}}</h4>{% endifchanged %}
+  
+  	<p class="" style="margin-left: 20px;">
+      	{{value|linebreaksbr}}
+ 	 </p>
+
+  {% endfor %}
+
+
+  
+   <br />
+   
+   
+
+  {% if allDomainProperties %}
+  
+	<br /><h3>Instance Properties:</h3><hr><br />
+	
+	<table border="0" cellspacing="3" cellpadding="5" class="classproperties table-hover">
+		
+		<tr>
+			<th height="60"><h4>Property</h4></th><th><h4>Expected Type</h4></th><th><h4>Description</h4></th>
+		</tr>
+		
+		{% for innerclass, properties in allDomainProperties  %}		
+		
+		<tr><th colspan="3" height="10"><h4 style="font-size: 13px; text-align: right;">
+			Properties from <a title="{{innerclass.class}}" href="{% url classes %}?model={{ontoFile}}&resource={{innerclass.class|encodeuri}}" class="rdfclass">{{innerclass.classname|truncchar_inverse:50}}</a></h4>
+		</th>
+		</tr>		
+		
+		{% for prop in properties  %}
+		<tr>
+			<td class="firsttd">
+				<h4><a class="propcolor" title="{{prop.prop}}" href="{% url properties %}?model={{ontoFile}}&resource={{prop.prop|encodeuri}}">{{prop.propname|truncchar_inverse:50}}</a></h4>			
+			</td>
+			<td class="secondtd">
+				{% if  prop.range %}
+				{% for range in prop.range  %}
+					{% if range.isdefined %}
+					<h4><a title="{{range.class}}" href="{% url classes %}?model={{ontoFile}}&resource={{range.class|encodeuri}}" class="rdfclass">{{range.classname|truncchar_inverse:50}}</a></h4> 
+					{% else %}
+					<h4>{{range.classname|truncchar_inverse:50}}</h4>
+					{% endif %}
+				{% endfor %}
+				{% else %}
+					<i>--</i>
+				{% endif %}
+			</td>
+			<td class="thirdtd">
+				<span>{{prop.comment.0}}</span>
+			</td>
+		</tr>
+
+		{% endfor %}
+		
+		{% endfor %}
+
+	</table>
+
+	<br /><br /><br />
+  
+  {% endif %}
+
+
+
+
+	<div class="row">
+		
+		<div class="span6">
+			
+			<br /><h3>Inheritance Diagram:</h3><hr>
+			
+			{% include "ontoview/components/tree_diagram.html" %}
+			
+		</div>
+		
+		
+		{# trick to move down automatically the right column when the tree_diagram is too big #}
+		
+		{% if alltree_diagram|length > 5 %}
+			<div class="span8">
+		{% else %}
+			<div class="span4">
+		{% endif %}
+		
+			
+			
+			<br />
+			
+			{% if subs %}
+	
+				<h3>More Specific types:</h3><hr>
+				{% for class in subs  %}
+					<li><a title="{{class.class}}" href="{% url classes %}?model={{ontoFile}}&resource={{class.class|encodeuri}}">{{class.classname|truncchar_inverse:50}}</a></li>
+				{% endfor %}	
+
+				<br /><br />
+			{% endif %}
+
+	
+			{% if siblings %}
+	
+				<h3>Siblings:</h3><hr>
+				{% for class in siblings  %}
+					<li><a title="{{class.class}}" href="{% url classes %}?model={{ontoFile}}&resource={{class.class|encodeuri}}">{{class.classname|truncchar_inverse:50}}</a></li>
+				{% endfor %}	
+
+				<br /><br />
+			{% endif %}
+	
+	
+	
+			{% if instances %}
+	
+				<h3>Instances:</h3><hr>
+				{% for instance in instances  %}
+					<li><a title="{{instance}}" class="instancecolor" href="{% url individuals %}?model={{ontoFile}}&resource={{instance|encodeuri}}">{{instance}}</a></li>
+				{% endfor %}	
+
+				<br /><br />
+			{% endif %}
+			
+		</div>
+
+	</div>
+
+
+
+
+
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+{% if  classtree %}
+
+	<div class="tabbable"> <!-- Only required for left/right tabs -->
+
+		{# <ul class="nav nav-tabs"> #}
+		{# 		 #}
+		{#     <li class="active">  #}
+		{# 		<a href="#tab1" data-toggle="tab">All</a></li> #}
+		{#     <li> #}
+		{# 		<a href="#tab2" data-toggle="tab">OWL</a></li> #}
+		{#     <li> #}
+		{# 		<a href="#tab3" data-toggle="tab">RDFS</a></li> #}
+		{# </ul> #}
+
+		<div class="tab-content">
+			
+			
+			
+			<div class="tab-pane active" id="tab1">  {# active #}
+
+				<div class="page-header">
+				  <h3>OWL Class tree</h3>	  
+				</div>
+
+					{{classtreeTable|safe}}
+			
+				<div class="pushup"></div>
+		  
+		  
+			</div>  {# end of tab1 #}
+			
+			{# <div class="tab-pane" id="tab2"> #}
+			{#  #}
+			{# 	<div class="page-header"> #}
+			{#   	  <h3>OWL Class tree</h3> #}
+			{# 	</div> #}
+			{#  #}
+			{#  #}
+			{# 		{{classtreeTable|safe}} #}
+			{#  #}
+			{# 	<div class="pushup"></div> #}
+			{#  #}
+			{#  #}
+			{# </div> #}  
+			{# end of tab2 #}
+
+	
+			{# <div class="tab-pane" id="tab3"> #}
+			{#  #}
+			{# 	<div class="page-header"> #}
+			{#   	  <h3>RDFS Class tree</h3> #}
+			{# 	</div> #}
+			{#  #}
+			{#  #}
+			{# 		{{classtreeTable|safe}} #}
+			{#  #}
+			{# 	<div class="pushup"></div> #}
+			{#  #}
+			{#  #}
+			{# </div>  #} 
+			{# end of tab3 #}
+			
+			
+			
+			
+			
+		
+		</div>
+	</div>
+	
+	
+{% endif %}
+
+
+
+
+
+
+{% endblock pagecontents %} 

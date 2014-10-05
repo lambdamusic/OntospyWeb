@@ -1,0 +1,77 @@
+
+{% load ontotags %}
+
+
+
+<div class="page-header">
+  <h3>	
+	  Individuals   	  
+  </h3>	  
+</div>
+
+
+
+
+<div class="well">
+{% for instance in instances  %}
+	 <a href="#{{instance.instancename}}">
+		 {{instance.instancename}}
+	 </a>
+	 <br />
+{% endfor %}
+</div>
+
+
+
+	
+
+{% for instance in instances  %}
+	
+<div class="row">
+	
+  	<div class="page-header">
+  	  <h3>
+
+		 <a title="{{instance.instance}}" class="rdfinstance" name="{{instance.instancename}}">
+			 &gt; {{instance.instancename}}
+		 </a>
+	  
+		  {% include "ontodocs/components/backtotop.html" %}
+	  
+  	  </h3>	  
+
+  	</div>
+
+</div>	
+
+
+
+
+<div class="row entityDescriptionRow">
+	
+	<div class="col-sm-5 col-md-5">
+		
+
+	
+		
+	</div>
+
+
+
+	<div class="col-sm-7 col-md-6">  {# col-md-offset-1 #}
+		
+			
+
+
+		
+	</div>
+	
+	
+
+
+
+</div>	
+
+	
+{% endfor %}
+
