@@ -1,11 +1,13 @@
-{% extends "ontodocs/base.html" %}
+{% extends "ontospyweb/base.html" %}
 {% load ontotags %}
 
 
 {% block pagecontents %}
 
 <div class="row text-center" style="margin-top: 70px;">
-  {# <div class="span14 offset2"> #}
+  
+  
+  <div class="col-sm-8 col-md-9  center-block" style="float: none;">
 	  
 	 <p class="text-muted">Please enter the URL of an RDFS/OWL ontology:</p> 
 	  
@@ -19,7 +21,8 @@
 	  <p class="text-center"><small class="text-muted">Max file size: 1M</small></p>
 	  
     </form>
-  {# </div> #}
+  </div>
+  
 </div>
 
 
@@ -28,19 +31,19 @@
 
 <div class="row " style="margin-top: 80px; margin-bottom: 60px;">
 
-	<div class="col-sm-8 col-md-9  center-block" style="float: none;">
+	<div class="col-sm-12 col-md-12  center-block" style="float: none;">
 			{# float:none is used to center the view #}
 		
 
 			<h3 class="text-center">Recently viewed:</h3>
 
-			<table id="history" class="table table-striped table-condensed table-hover ">
+			<table id="history" class="table table-striped table-condensed table-hover table-responsive " style="table-layout: fixed; word-wrap: break-word;">
 				  <thead>
 			      <tr>
-			          <th>Vocabulary URI</th>
-			          <th>Description</th>                                         
-			          <th>Last Opened</th>                                         
-			          <th>Tot Clicks</th>                                         
+			          <th class="col-md-4">Vocabulary URI</th>
+			          <th class="col-md-6">Description</th>                                         
+			          <th class="col-md-1">Last Opened</th>                                         
+			          <th class="col-md-1">Tot Clicks</th>                                         
 			      </tr>
 			  </thead>   
 			  <tbody>
@@ -48,10 +51,10 @@
 			  	{% for o in history  %}
 
 				<tr>
-			   	 <td><a href="{% url ontodocs_main %}?uri={{o.uri}}&amp;startpage=true"><code>{{o.uri}}</code></a></td>
-			   	 <td>{{o.description|truncatewords:30}}</td>
-			   	 <td>{{o.pubdate|date:"d/m/Y"}}</td>
-			     <td><span class="badge">{{o.score}}</span></td> 
+			   	 <td ><a href="{% url ontodocs_main %}?uri={{o.uri}}&amp;startpage=true"><code>{{o.uri}}</code></a></td>
+			   	 <td >{{o.description|truncatewords:30}}</td>
+			   	 <td >{{o.pubdate|date:"d/m/Y"}}</td>
+			     <td ><span class="badge">{{o.score}}</span></td> 
 				</tr>
 
 				{% endfor %}	
@@ -121,19 +124,19 @@
 {% block footer %}
 
 <div class="footer" style="height: inherit; ">
-
+	 <a name="jumptobottom"></a>
 
   <div class="container namespaces-container">
 
 
-	  {% include "ontodocs/components/about.html" %}
+	  {% include "ontospyweb/components/about.html" %}
 
 
   </div>
 	
 	
 
-	{% include "ontodocs/components/footer-common.html" %}
+	{% include "ontospyweb/components/footer-common.html" %}
   
 
 </div>

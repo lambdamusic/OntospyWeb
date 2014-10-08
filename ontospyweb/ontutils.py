@@ -5,7 +5,7 @@
 
 
 ##################
-#  ontodocs
+#  ontospyweb
 # 
 ##################
 
@@ -26,18 +26,18 @@ from StringIO import StringIO
 import urllib2
 import os
 
-from ontoview.models import *
+from ontospyweb.models import *
 from settings import STATIC_URL
 
 # ps: this uses the local installation
-from ontospy_local.ontospy import *
+from ontospy.ontospy import *
 
 from django.core.cache import cache
 
 
 # calc abs paths for the **models** folder, assuming it's in the static dir of the ontoview app
 thisFilePath = os.path.dirname(os.path.realpath(__file__)).rsplit('/', 1)[0] 
-LOCAL_ONTOLOGIES_FOLDER = os.path.join(thisFilePath, 'ontodocs/static/ontodocs/ontologies/')
+LOCAL_ONTOLOGIES_FOLDER = os.path.join(thisFilePath, 'ontospyweb/static/ontospyweb/ontologies/')
 
 
 
@@ -61,9 +61,9 @@ def get_current_ontology(request, url, startpage=False):
 		# override physical location set by OntosPy (so to allow source download via Django static handler)
 		prefix = 'https://' if request.is_secure() else 'http://'
 		if STATIC_URL.startswith("http"):
-			onto.ontologyPhysicalLocation = STATIC_URL + 'ontoview/models/' + url.replace("file://localhost/", "")
+			onto.ontologyPhysicalLocation = STATIC_URL + 'ontospyweb/ontologies/' + url.replace("file://localhost/", "")
 		else:
-			onto.ontologyPhysicalLocation = prefix + request.get_host() + STATIC_URL + 'ontoview/models/' + url.replace("file://localhost/", "")
+			onto.ontologyPhysicalLocation = prefix + request.get_host() + STATIC_URL + 'ontospyweb/ontologies/' + url.replace("file://localhost/", "")
 		return onto
 	
 	else: 

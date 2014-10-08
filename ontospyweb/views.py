@@ -5,7 +5,7 @@
 
 
 ##################
-#  ontodocs
+#  ontospyweb
 # 
 ##################
 
@@ -27,14 +27,14 @@ from StringIO import StringIO
 import urllib2
 import os
 
-from ontoview.models import *
+from ontospyweb.models import *
 from settings import STATIC_URL
 
 from ontutils import *
 
 
 # ps: this uses the local installation
-from ontospy_local.ontospy import *
+from ontospy.ontospy import *
 
 
 		
@@ -55,7 +55,7 @@ def ontoDocsMain(request):
 			onto = get_current_ontology(request, request.GET.get('uri', ''), request.GET.get('startpage', ''))
 			SHOW_SEARCH_PAGE = False
 		except:# catch all errors while trying to load the ontology
-			_message = "Sorry! The file you tried to load does not look like a valid RDF/OWL ontology."		
+			_message = "Ops! An error was encountered while trying to open this file. Are you sure it's a valid RDFS/OWL ontology?"		
 			messages.error(request, _message)
 
 
@@ -67,14 +67,14 @@ def ontoDocsMain(request):
 		else:
 			local_ontologies = []
 	
-		history = HistoryEntry.objects.all().order_by('-pubdate')
+		history = HistoryEntry.objects.all().order_by('-score')
 		
 		context = {	  
 					'local_ontologies' : local_ontologies ,		
 					'history' : history ,		
 					'LOCAL_ONTOLOGIES_FOLDER' : LOCAL_ONTOLOGIES_FOLDER,
 					}
-		return render_to_response('ontodocs/startsearch.html', 
+		return render_to_response('ontospyweb/startsearch.html', 
 									context,
 									context_instance=RequestContext(request))
 	
@@ -89,7 +89,7 @@ def ontoDocsMain(request):
 	context.update(get_dataProperties(onto))
 	context.update(get_individuals(onto))
 	
-	return render_to_response('ontodocs/docspage.html', 
+	return render_to_response('ontospyweb/docspage.html', 
 								context,
 								context_instance=RequestContext(request))
 
