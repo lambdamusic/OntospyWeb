@@ -30,7 +30,7 @@ from ontospyweb.models import *
 from settings import STATIC_URL
 
 # ps: this uses the local installation
-from ontospy.ontospy import *
+from ontospy_local.ontospy import *
 
 from django.core.cache import cache
 
@@ -345,6 +345,8 @@ def formatHTML_PropTreeTable(onto, classPredicate, treedict = None, element = 0)
 	if not treedict:
 		if classPredicate == "owl.objprop":
 			treedict = onto.ontologyObjPropertyTree
+		elif classPredicate == "owl.annotationprop":
+			treedict = onto.ontologyAnnotationPropertyTree
 		else:
 			treedict = onto.ontologyDataPropertyTree
 

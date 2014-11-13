@@ -1,5 +1,5 @@
 {# July 1, 2014: added when upgraded to Bootstrap 3.2 #}
-
+{% load ontotags %}
 
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
 	{% block pagetitle %}
-		<title>OntospyWeb</title>
+		<title>OntoSPy</title>
 		{# 8835 9776 #}
 	{% endblock pagetitle %}
 	
@@ -27,6 +27,11 @@
 		
 	<link href="{{ STATIC_URL }}ontospyweb/ontospyweb.css" rel="stylesheet">	
 	
+	
+	<script src="{{ STATIC_URL }}libs/chart.js-master/Chart.js"></script>
+	<script src="{{ STATIC_URL }}libs/chart.js.legend-master/src/legend.js"></script>
+	
+
 	{% block extrahead %}
 	
 		
@@ -71,9 +76,16 @@
 	  <div class="container main-container">
 	  
 	  
+	  	{% block pageh1title %}
+		
+		{% endblock pageh1title %}
+		
+
+	  
+	  
 	  	{% block pagecontents %}
 		
-	  		<h1>Hello, world!</h1>
+	  		{# <h1>Hello, world!</h1> #}
 	  	
 		
 		{% endblock pagecontents %}
@@ -109,11 +121,15 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="{{ STATIC_URL }}bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
 	
+	
+	
 	{% block global_js  %}
 
 	{% endblock  %}
 	
+
 	
+	{% include "googlestats.html" %}
 	
   </body>
 </html>

@@ -5,7 +5,7 @@ OntospyWeb is a tool made for navigating ontologies ('vocabularies') encoded usi
 This project was previously called Django Semantic Browser: https://github.com/lambdamusic/django-semantic-browser.
 </blockquote>
 
-Version: 0.9.1
+Version: 0.9.3
 
 ### Installation
 

@@ -48,9 +48,9 @@
 		<div id="superproperties">
 		
 			<br />
-			<h4 class="text-muted">rdfs:subPropertyOf</h4>	
+			<h4>rdfs:subPropertyOf</h4>	
 	
-			<p class="" style="margin-left: 20px;">
+			<p class="rdfobject" style="margin-left: 20px;">
 
 			  {% for prop in propData.supers  %}
 		 	 	
@@ -73,7 +73,7 @@
 
 	    {% for class in propData.prop.domain  %}    
 
-	  	<p class="" style="margin-left: 20px;">
+	  	<p class="rdfobject" style="margin-left: 20px;">
 	    	{% if class.isdefined %}
 	    	<a title="{{class.class}}" href="#{{class.classname}}" class="rdfclass">{{class.classname|truncchar_inverse:30}}</a> 
 	    	{% else %}
@@ -85,7 +85,7 @@
 
 	  {% else %}
 	  	<br /><h4>rdfs:domain</h4>
-		  	<p class="" style="margin-left: 20px;">
+		  	<p class="rdfobject" style="margin-left: 20px;">
 		 	 	<a title="Go to top" href="#top" class="rdfclass">
 					owl:Thing
 				</a>
@@ -101,7 +101,7 @@
 
 		    {% for class in propData.prop.range  %}    
 
-		  	<p class="" style="margin-left: 20px;">
+		  	<p class="rdfobject" style="margin-left: 20px;">
 		    	{% if class.isdefined %}
 		    	<a title="{{class.class}}" href="#{{class.classname}}" class="rdfclass">{{class.classname|truncchar_inverse:30}}</a> 
 		    	{% else %}
@@ -114,7 +114,7 @@
   	  {% else %}
   
   	  	<br /><h4>rdfs:range</h4>
-  		  	<p class="" style="margin-left: 20px;">
+  		  	<p class="rdfobject" style="margin-left: 20px;">
   		 	 	<a title="Go to top" href="#top" class="rdfclass">
   					owl:Thing
   				</a>
@@ -144,7 +144,7 @@
 					<h4>{{name}}</h4>
 				{% endifchanged %}
 
-		    	<p class="" style="margin-left: 20px;">
+		    	<p class="rdfobject" style="margin-left: 20px;">
 		        	{{value|linebreaksbr}}
 		   	 	</p>
 

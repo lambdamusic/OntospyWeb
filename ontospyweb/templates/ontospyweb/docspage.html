@@ -3,6 +3,27 @@
 
 
 
+
+
+{% block pageh1title %}
+
+	  	
+	{% if ontoPrettyUri %}
+
+		<h1 class="ontoPrettyUri">
+			<a href="{{ontoFileNoMask}}" title="Click to open original source">{{ontoPrettyUri|truncchar_inverse:50|default:"no uri available"}}</a>
+		&nbsp;	
+	 	 <a href="#jumptobottom" class="btn btn-default navbar-btn btn-xs">namespaces</a>
+		</h1>
+
+	
+   {% endif %}
+	   	   
+{% endblock pageh1title %}
+
+
+
+
 {% block pagecontents %}
 
 <div class="row" style="margin-top: 50px;">
@@ -18,36 +39,60 @@
 		  <li class="active">
 			  <a href="#tab1" data-toggle="tab">Ontology</a></li>
 		 
+		  {% if classesData %}
 		  <li {% if not classesData %}class="disabled"{% endif %}>
 			  <a {% if classesData %}href="#tab2" data-toggle="tab"{% endif %}>Classes 
 				  {% if classesData %}
 				  <span class="badge">{{classesData|length}}</span>
 				  {% endif %}
 			  </a></li>
+		 {% endif %}
 		 
+		 {% if objPropertiesData %}
 		  <li {% if not objPropertiesData %}class="disabled"{% endif %}>
-			  <a {% if objPropertiesData %}href="#tab3" data-toggle="tab"{% endif %}>Object Properties
+			  <a {% if objPropertiesData %}href="#tab3" data-toggle="tab"{% endif %}>Object Prop.
 				  {% if objPropertiesData %}
 				  <span class="badge">{{objPropertiesData|length}}</span>
 			  	  {% endif %}
 		  </a></li>
+		 {% endif %}
 		 
+		 
+		 {% if dataPropertiesData %}
 		  <li {% if not dataPropertiesData %}class="disabled"{% endif %}>
-			  <a {% if dataPropertiesData %}href="#tab4" data-toggle="tab"{% endif %}>Datatype Properties
+			  <a {% if dataPropertiesData %}href="#tab4" data-toggle="tab"{% endif %}>Datatype Prop.
 			  	{% if dataPropertiesData %}
 				<span class="badge">{{dataPropertiesData|length}}</span>
 				{% endif %}
 			</a></li>
+		 {% endif %}
 		 
-		  <li {% if not TOTindividuals %}class="disabled"{% endif %}>
-			  <a {% if TOTindividuals %}href="#tab5" data-toggle="tab"{% endif %}>Individuals 
-				  {% if TOTindividuals %}
-				  <span class="badge">{{TOTindividuals}}</span>
+		 
+		 {% if annotationPropertiesData %}
+		  <li {% if not annotationPropertiesData %}class="disabled"{% endif %}>
+			  <a {% if annotationPropertiesData %}href="#tab5" data-toggle="tab"{% endif %}>Annotation Prop.
+			  	{% if annotationPropertiesData %}
+				<span class="badge">{{annotationPropertiesData|length}}</span>
+				{% endif %}
+			</a></li>
+		 {% endif %}	 
+		 
+		 
+		 {% if instancesData %} 
+		  <li {% if not instancesData %}class="disabled"{% endif %}>
+			  <a {% if instancesData %}href="#tab6" data-toggle="tab"{% endif %}>Individuals 
+				  {% if instancesData %}
+				  <span class="badge">{{instancesData|length}}</span>
 				  {% endif %}
 			  </a></li>
+		 {% endif %}
 		 
-		  <li>
-			  <a href="#tab6" data-toggle="tab">Metrics</a></li>
+		 
+		  {# <li> #}
+		  {# 			  <a href="#tab7" data-toggle="tab">Metrics</a> #}
+		  {# </li> #}
+		
+		
 		</ul>
 
 		
@@ -59,31 +104,53 @@
 			   	{% include "ontospyweb/tabs/ontology.html" %}
 			  </div>
 		  </div>
-		  <div class="tab-pane" id="tab2">
-			  <div class="col-sm-8 col-md-12">
-		  		  {% include "ontospyweb/tabs/classes.html" %}
+		  
+		  {% if classesData %}
+			  <div class="tab-pane" id="tab2">
+				  <div class="col-sm-8 col-md-12">
+			  		  {% include "ontospyweb/tabs/classes.html" %}
+					</div>
+			  </div>
+		  {% endif %}
+		  
+		  {% if objPropertiesData %}
+			  <div class="tab-pane" id="tab3">
+			  	<div class="col-sm-8 col-md-12">
+					{% include "ontospyweb/tabs/objprop.html" %}
 				</div>
-		  </div>
-		  <div class="tab-pane" id="tab3">
-		  	<div class="col-sm-8 col-md-12">
-				{% include "ontospyweb/tabs/objprop.html" %}
-			</div>
-		  </div>
-		  <div class="tab-pane" id="tab4">
-		  	<div class="col-sm-8 col-md-12">
-				{% include "ontospyweb/tabs/dataprop.html" %}
-			</div>
-		  </div>
-		  <div class="tab-pane" id="tab5">
-		  	<div class="col-sm-8 col-md-12">
-				{% include "ontospyweb/tabs/individuals.html" %}
-			</div>
-		  </div>
-		  <div class="tab-pane" id="tab6">
-		  	<div class="col-sm-8 col-md-12">
-				{% include "ontospyweb/tabs/metrics.html" %}
-			</div>
-		  </div>
+			  </div>
+		  {% endif %}
+		  
+		  {% if dataPropertiesData %}
+			  <div class="tab-pane" id="tab4">
+			  	<div class="col-sm-8 col-md-12">
+					{% include "ontospyweb/tabs/dataprop.html" %}
+				</div>
+			  </div>
+		  {% endif %}
+		  
+		  {% if annotationPropertiesData %}
+			  <div class="tab-pane" id="tab5">
+			  	<div class="col-sm-8 col-md-12">
+					{% include "ontospyweb/tabs/annotationprop.html" %}
+				</div>
+			  </div>
+		  {% endif %}
+		  
+		  {% if instancesData %} 
+			  <div class="tab-pane" id="tab6">
+			  	<div class="col-sm-8 col-md-12">
+					{% include "ontospyweb/tabs/individuals.html" %}
+				</div>
+			  </div>
+		  {% endif %}
+		  
+			{# 		  <div class="tab-pane" id="tab7"> #}
+			{# 		  	<div class="col-sm-8 col-md-12"> #}
+			{# 	{% include "ontospyweb/tabs/metrics.html" %} #}
+			{# </div> #}
+			{# 		  </div> #}
+		  
 		</div>
 		
 		

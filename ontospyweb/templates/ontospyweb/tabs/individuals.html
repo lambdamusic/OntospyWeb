@@ -13,7 +13,7 @@
 
 
 <div class="well">
-{% for instance in instances  %}
+{% for instance in instancesData  %}
 	 <a href="#{{instance.instancename}}">
 		 {{instance.instancename}}
 	 </a>
@@ -25,7 +25,7 @@
 
 	
 
-{% for instance in instances  %}
+{% for instance in instancesData  %}
 	
 <div class="row">
 	
@@ -52,6 +52,26 @@
 	<div class="col-sm-5 col-md-5">
 		
 
+		
+		{% if instance.types %}
+		<div id="parents">
+			
+			<br />
+			<h4 class="text-muted">rdfs:type</h4>	
+	
+			<p class="rdfobject" style="margin-left: 20px;">
+
+				{% for class in instance.types %}     
+				<a title="{{class.class}}" class="rdfclass"
+					{% if class.isdefined %} href="#{{class.classname}}"{% endif %} >{{class.classname|truncchar_inverse:50}}</a>
+					{% if not forloop.last %}&nbsp;|&nbsp;{% endif %}   
+				{% endfor %}
+				
+			  
+  			</p>
+
+		</div>
+		{% endif %}
 	
 		
 	</div>
@@ -60,6 +80,27 @@
 
 	<div class="col-sm-7 col-md-6">  {# col-md-offset-1 #}
 		
+		
+		<div id="triples">
+		
+		
+		    {% for name, value in instance.alltriples  %}
+			
+				{% ifnotequal name "rdf:type"  %}
+			  		{% ifchanged name %}
+						<br />
+						<h4>{{name}}</h4>
+					{% endifchanged %}
+
+			    	<p class="rdfobject" style="margin-left: 20px;">
+			        	{{value|linebreaksbr}}
+			   	 	</p>
+				{% endifnotequal %}
+
+		    {% endfor %}
+		
+		
+		</div>
 			
 
 

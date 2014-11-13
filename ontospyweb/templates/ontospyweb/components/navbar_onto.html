@@ -16,26 +16,16 @@
 	  <a name="top"></a>
 	  
 	  
-	  {% if ontoPrettyUri %}
-	  
       <a class="navbar-brand" href="{% url ontodocs_main %}" title="Home">
-		  OntospyWeb&nbsp;&nbsp;&nbsp;&gt;&nbsp;
+		  OntoSPy&nbsp;&nbsp;
 	  </a>
 	  
-      <a class="navbar-brand" href="{{ontoFileNoMask}}" target="_blank" title="Download original">
-		<code style="background: rgb(243, 213, 213);">{{ontoPrettyUri|truncchar_inverse:80|default:"no uri available"}}</code>
-	  </a>
-		
-	  <p class="navbar-nav navbar-right"><a href="#jumptobottom" class="btn btn-default navbar-btn btn-xs">namespaces</a></p>
-		
-		
+	  {% if not ontoPrettyUri %}
+	  	<a href="#jumptobottom" class="btn btn-default navbar-btn btn-xs">about</a>
+	  	
 	  {% else %}
-	  
-      <a class="navbar-brand" href="{% url ontodocs_main %}" title="Home">
-		  OntospyWeb&nbsp;&nbsp;
-	  </a>
-	  
-	  <a href="#jumptobottom" class="btn btn-default navbar-btn btn-xs">about</a>
+	  	
+		<a href="{% url ontodocs_main %}" class="btn btn-default navbar-btn btn-xs">home</a>
 	  	
 	  {% endif %}	
 		

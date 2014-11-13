@@ -34,7 +34,7 @@ from ontutils import *
 
 
 # ps: this uses the local installation
-from ontospy.ontospy import *
+from ontospy_local.ontospy import *
 
 
 		
@@ -87,6 +87,7 @@ def ontoDocsMain(request):
 	context.update(get_classes(onto))
 	context.update(get_objProperties(onto))
 	context.update(get_dataProperties(onto))
+	context.update(get_annotationProperties(onto))
 	context.update(get_individuals(onto))
 	
 	return render_to_response('ontospyweb/docspage.html', 
@@ -271,40 +272,70 @@ def get_dataProperties(onto):
 
 
 
+
+def get_annotationProperties(onto):
+	""" 
+	Return the OWL annotation properties info 
+	"""
+
+	annotationPropertiesData = []
+	
+	#PROPERTY TREE	
+	context = {	  
+				'annotationpropertiesTree' : formatHTML_PropTreeTable(onto, classPredicate="owl.annotationprop") ,
+				}
+	
+	# for each property, add more info
+	for aProp in onto.allannotationproperties:
+		
+		# PROPERTY INFO
+		supers = onto.propertyAllSupers(aProp)
+		# alltree = supers + [aProp]
+		# subs = onto.propertyDirectSubs(aProp, sortUriName = True)
+
+		# alltriples = entityTriples(aProp, niceURI=True, excludeProps=[RDF.type, RDFS.subPropertyOf, RDFS.isDefinedBy, RDFS.domain, RDFS.range], excludeBNodes = False,) 
+		
+		_exclude_ = [RDF.type, RDFS.subPropertyOf, RDFS.isDefinedBy, RDFS.domain, RDFS.range]
+		alltriples = entityTriples(onto.rdfGraph, aProp, excludeProps=_exclude_, excludeBNodes = False,)
+		alltriples = [(uri2niceString(y, onto.ontologyNamespaces), z) for y,z in alltriples]
+		
+		mydict = {	  
+					'prop' : onto.propertyRepresentation(aProp) ,
+					'supers' : [onto.propertyRepresentation(x) for x in supers] ,
+					# 'subs' : [onto.propertyRepresentation(x) for x in subs] ,
+					'alltriples' : alltriples,
+					}
+		
+		annotationPropertiesData += [mydict]
+
+						
+	context.update({'annotationPropertiesData' : annotationPropertiesData})	
+	return context
+
+
+
+
+
+
+
+
+
+
 def get_individuals(onto):
 	""" 
 	
 	"""
 
-	# ALL INDIVIDUALS	
+	instancesData = []
+	context = {}
 	
-	context = {	  
-				'instances' : [onto.instanceRepresentation(instance) for instance in onto.allinstances] ,
+	# ALL INDIVIDUALS	
+	# no need for extra calculations here
+	
+	context = {
+				'instancesData' : [onto.instanceRepresentation(instance) for instance in onto.allinstances] ,
 				}
-
-	if False:
-		if onto.instanceFind(resource):
-			instance = onto.instanceFind(resource)[0]
-			instance_repr = onto.instanceRepresentation(instance)
-			siblings = onto.instanceSiblings(instance)
-			# triples = entityTriples(instance, excludeProps=[RDF.type, RDFS.comment])
-			# INDIVIDUAL INFO
-			context = {	  
-						'instance' : instance_repr ,
-						'siblings' : siblings ,
-						'triples' : [(onto.propertyRepresentation(p), o) for p,o in instance_repr['alltriples']] ,
-						}
-			defaul_context = getDefaultContext(onto)
-			context.update(defaul_context)
-		else:
-			# ERROR MSG
-			context = {	  
-						'resource404' : True ,
-						'resource' : resource ,
-						}
-			defaul_context = getDefaultContext(onto)
-			context.update(defaul_context)
-							
+					
 	return context
 
 

@@ -33,6 +33,10 @@ body {
 
 
 
+.nav-tabs>li>a {
+font-size: 90%;
+}
+
 /*note: this does not have effect on class/prop trees */
 .propcolor {color: darkcyan;}
 .propcolor:hover {color: darkgreen;}
@@ -52,6 +56,16 @@ body {
 .rdfinstance {
 	color: #0C6D33;
 }		
+
+
+.ontoPrettyUri {
+    color: grey;
+}
+
+.rdfobject {
+    font-size: 17px;
+    color: grey;
+}
 
 #stats_table td {vertical-align: middle;}
 #stats_table p {margin: 10px 0px 10px 0px;}
@@ -193,3 +207,22 @@ table.classproperties h4 {color: gray;}
 
 
 
+/* styles for chart.js */
+
+
+#legendEntities.legend {
+/*    width: 10em;*/
+/*    border: 1px solid black;*/
+}
+
+#chartsLegend .legend .title {
+/*    display: block;">{*/
+    margin: 0.5em;
+    border-style: solid;
+    border-width: 0 0 0 1em;
+    padding: 0 0.3em;
+}
+
+#chartsLegend span.title {
+    display:block ;
+}
