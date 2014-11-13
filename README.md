@@ -24,7 +24,7 @@ https://github.com/lambdamusic/ontosPy
 
 ### Demo
 
-A demo installation is available here: http://hacks.michelepasin.org/ontospyweb/
+A demo installation is available here: http://hacks.michelepasin.org/ontospy/
 
 ### Notes
 The folder `..ontospyweb/static/ontospyweb/ontologies/` contains a few ontology files which are displayed on the start page only to logged in users. 
