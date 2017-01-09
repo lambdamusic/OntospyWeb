@@ -2,6 +2,10 @@
 OntospyWeb is a tool made for navigating ontologies ('vocabularies') encoded using the RDF family of languages which are part of the W3C Semantic Web standards.
 
 <blockquote>
+This project is not supported anymore and soon will be retired. If you are looking for a way to generate docs for an ontology, check out https://github.com/lambdamusic/ontosPy 
+</blockquote>
+
+<blockquote>
 This project was previously called Django Semantic Browser: https://github.com/lambdamusic/django-semantic-browser.
 </blockquote>
 
